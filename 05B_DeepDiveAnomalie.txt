@@ -1,0 +1,433 @@
+=== PHASE 4B2: ADVANCED ANOMALIE-VORHERSAGE ===
+Time-Series-Forecasting, Risk-Scoring & Predictive Failure-Detection
+===========================================================================
+🚨 STARTE ADVANCED ANOMALIE-VORHERSAGE DEEP-DIVE...
+===========================================================================
+📂 Lade Daten...
+✅ IPv4: 160,923 Messungen geladen
+✅ IPv6: 160,923 Messungen geladen
+
+===========================================================================
+ADVANCED ANOMALIE-PREDICTION-ANALYSE FÜR IPv4
+===========================================================================
+
+1. ERWEITERTE ANOMALIE-FEATURE-EXTRAKTION - IPv4
+------------------------------------------------------------
+Extrahiere erweiterte Features aus 160,923 Messungen...
+  Features extrahiert: 25,000 Messungen...
+  Features extrahiert: 50,000 Messungen...
+  Features extrahiert: 75,000 Messungen...
+  Features extrahiert: 100,000 Messungen...
+  Features extrahiert: 125,000 Messungen...
+  Features extrahiert: 150,000 Messungen...
+✓ 160,923 erweiterte Feature-Vektoren erstellt
+
+📊 ANOMALIE-VERTEILUNG:
+  Gesamte Anomalien: 40,679 (25.3%)
+  normal: 79,723 (49.5%)
+  moderate: 72,582 (45.1%)
+  severe: 8,618 (5.4%)
+
+2. TIME-SERIES-ANOMALIE-DETECTION - IPv4
+-------------------------------------------------------
+🕒 ZEITREIHEN-AGGREGATION UND TREND-ANALYSE:
+Zeitreihen-Daten erstellt: 40,530 Stunden-Datenpunkte
+
+📈 TREND-DETECTION FÜR KRITISCHE SERVICES:
+Signifikante Trends gefunden: 0
+
+🤖 SEQUENCE-BASED ANOMALIE-DETECTION:
+Sequence-Anomalien detektiert: 995
+
+Top-5 Sequence-Anomalien:
+  Cloudflare DNS @ 2025-06-03 16:00:00: 46.8ms (4.7σ)
+  Quad9 DNS @ 2025-06-05 05:00:00: 134.4ms (4.7σ)
+  Cloudflare DNS @ 2025-06-19 10:00:00: 45.9ms (4.6σ)
+  Cloudflare DNS @ 2025-06-20 06:00:00: 24.2ms (4.5σ)
+  Quad9 DNS @ 2025-06-20 10:00:00: 62.1ms (4.4σ)
+
+3. ML ANOMALIE-PREDICTION-MODELLE - IPv4
+--------------------------------------------------
+ML-Dataset: 160,923 Samples, 18 Features
+Anomalie-Balance: 40,679 Anomalien (25.3%)
+
+🤖 ANOMALIE-PREDICTION-MODELLE:
+
+1. ISOLATION FOREST (Unsupervised Anomalie-Detection):
+  Accuracy: 0.732
+  Precision: 0.469
+  Recall: 0.468
+
+2. RANDOM FOREST CLASSIFIER (Supervised):
+  AUC-ROC: 1.000
+  Accuracy: 0.999
+  Precision: 0.998
+  Recall: 0.999
+
+  Top-5 wichtigste Features:
+    geographic_risk: 0.310
+    continent_numeric: 0.136
+    final_latency: 0.089
+    total_packet_loss: 0.085
+    max_latency_jump: 0.083
+
+3. DBSCAN CLUSTERING (Density-based):
+  Anomalien detektiert: 21231
+  Precision: 0.260
+  Recall: 0.679
+  Cluster gefunden: 532
+
+4. ENSEMBLE-PREDICTION:
+  Ensemble Accuracy: 0.926
+  Ensemble Precision: 0.998
+  Ensemble Recall: 0.707
+
+📊 MODELL-PERFORMANCE-VERGLEICH:
+              Model  Accuracy  Precision  Recall
+0  Isolation Forest     0.732      0.469   0.468
+1     Random Forest     0.999      0.998   0.999
+2            DBSCAN       NaN      0.260   0.679
+3          Ensemble     0.926      0.998   0.707
+
+4. GEOGRAFISCHES RISK-SCORING-SYSTEM - IPv4
+-------------------------------------------------------
+🌍 REGIONALES RISK-ASSESSMENT:
+Regionale Risk-Scores:
+  🔴 af-south-1 (Africa): 67.5/100 - Critical Risk
+     Anomalie-Rate: 97.9%, Anycast: 7.5ms
+  🟠 ap-east-1 (Asia): 47.6/100 - High Risk
+     Anomalie-Rate: 78.9%, Anycast: 4.7ms
+  🟡 ap-southeast-2 (Oceania): 38.5/100 - Medium Risk
+     Anomalie-Rate: 29.2%, Anycast: 1.0ms
+  🟡 ap-south-1 (Asia): 38.1/100 - Medium Risk
+     Anomalie-Rate: 23.1%, Anycast: 1.3ms
+  🟡 ca-central-1 (North America): 24.4/100 - Medium Risk
+     Anomalie-Rate: 2.5%, Anycast: 1.2ms
+  🟡 ap-northeast-1 (Asia): 24.1/100 - Medium Risk
+     Anomalie-Rate: 12.8%, Anycast: 2.5ms
+  🟡 sa-east-1 (South America): 21.8/100 - Medium Risk
+     Anomalie-Rate: 0.5%, Anycast: 0.7ms
+  🟢 eu-north-1 (Europe): 19.3/100 - Low Risk
+     Anomalie-Rate: 6.6%, Anycast: 3.5ms
+  🟢 us-west-1 (North America): 18.9/100 - Low Risk
+     Anomalie-Rate: 0.6%, Anycast: 1.8ms
+  🟢 eu-central-1 (Europe): 16.3/100 - Low Risk
+     Anomalie-Rate: 0.6%, Anycast: 1.3ms
+
+🌍 KONTINENTALES RISK-RANKING:
+  🔴 Africa: 67.5/100 Risk-Score
+     Anomalie-Rate: 97.9%, Anycast-Performance: 7.5ms
+  🟡 Oceania: 38.5/100 Risk-Score
+     Anomalie-Rate: 29.2%, Anycast-Performance: 1.0ms
+  🟡 Asia: 36.6/100 Risk-Score
+     Anomalie-Rate: 38.3%, Anycast-Performance: 2.8ms
+  🟢 South America: 21.8/100 Risk-Score
+     Anomalie-Rate: 0.5%, Anycast-Performance: 0.7ms
+  🟢 North America: 21.6/100 Risk-Score
+     Anomalie-Rate: 1.5%, Anycast-Performance: 1.5ms
+  🟢 Europe: 17.8/100 Risk-Score
+     Anomalie-Rate: 3.6%, Anycast-Performance: 2.4ms
+
+🏢 PROVIDER RISK-ASSESSMENT:
+Provider Risk-Ranking:
+  🔴 Google: 60.6/100
+     Anomalie-Rate: 21.2%, Latenz: 3.7ms
+  🔴 Quad9: 60.0/100
+     Anomalie-Rate: 20.0%, Latenz: 2.8ms
+  🔴 Cloudflare: 58.7/100
+     Anomalie-Rate: 17.3%, Latenz: 1.8ms
+  🔴 Heise: 45.9/100
+     Anomalie-Rate: 30.8%, Latenz: 148.0ms
+  🔴 Akamai: 45.4/100
+     Anomalie-Rate: 38.9%, Latenz: 145.6ms
+  🔴 UC Berkeley: 41.4/100
+     Anomalie-Rate: 31.3%, Latenz: 159.3ms
+
+5. REAL-TIME ANOMALIE-DETECTION-PIPELINE - IPv4
+------------------------------------------------------------
+⚡ REAL-TIME PIPELINE-ARCHITEKTUR:
+
+  📦 DATA INGESTION:
+    description: MTR-Messungen alle 15 Minuten
+    latency: <1 Sekunde
+    throughput: ~100 Messungen/Minute
+
+  📦 FEATURE EXTRACTION:
+    description: Echtzeit-Feature-Engineering
+    latency: <5 Sekunden
+    features: 18
+
+  📦 ANOMALY SCORING:
+    description: ML-Modell-Ensemble-Scoring
+    models: Isolation Forest, Random Forest
+    latency: <2 Sekunden
+
+  📦 RISK ASSESSMENT:
+    description: Geografisches Risk-Scoring
+    risk_levels: Low, Medium, High, Critical
+    update_frequency: Stündlich
+
+  📦 ALERTING:
+    description: Multi-Level-Alert-System
+    channels: Dashboard, Email, Slack, SMS
+    thresholds:
+      info: Anomalie-Score > 3
+      warning: Anomalie-Score > 5
+      critical: Anomalie-Score > 7
+
+🔮 ANOMALIE-PREDICTION-SIMULATION:
+
+Beispiel-Simulationen:
+  📊 Normal Cloudflare:
+    Final Score: 0.055
+    Alert Level: NORMAL
+    Action: No action required
+    Confidence: 98.4%
+  📊 Afrika Problem:
+    Final Score: 0.340
+    Alert Level: INFO
+    Action: Log for analysis
+    Confidence: 60.8%
+  📊 Severe Anomalie:
+    Final Score: 0.527
+    Alert Level: WARNING
+    Action: Monitor closely
+    Confidence: 7.6%
+  📊 Akamai Normal:
+    Final Score: 0.189
+    Alert Level: NORMAL
+    Action: No action required
+    Confidence: 62.1%
+
+📈 PIPELINE-PERFORMANCE-MONITORING:
+  • prediction_accuracy: Tägliche Validation gegen Ground Truth
+  • false_positive_rate: Ziel: <5% False Positives
+  • detection_latency: Ziel: <10 Sekunden End-to-End
+  • model_drift: Wöchentliche Feature-Drift-Detection
+  • data_quality: Missing/Invalid Data Rate <1%
+  • alert_fatigue: Critical Alerts <10/Tag
+
+6. ANOMALIE-PREDICTION VISUALISIERUNGEN - IPv4
+------------------------------------------------------------
+
+===========================================================================
+ADVANCED ANOMALIE-PREDICTION-ANALYSE FÜR IPv6
+===========================================================================
+
+1. ERWEITERTE ANOMALIE-FEATURE-EXTRAKTION - IPv6
+------------------------------------------------------------
+Extrahiere erweiterte Features aus 160,923 Messungen...
+  Features extrahiert: 25,000 Messungen...
+  Features extrahiert: 50,000 Messungen...
+  Features extrahiert: 75,000 Messungen...
+  Features extrahiert: 100,000 Messungen...
+  Features extrahiert: 125,000 Messungen...
+  Features extrahiert: 150,000 Messungen...
+✓ 160,923 erweiterte Feature-Vektoren erstellt
+
+📊 ANOMALIE-VERTEILUNG:
+  Gesamte Anomalien: 39,577 (24.6%)
+  normal: 77,130 (47.9%)
+  moderate: 74,514 (46.3%)
+  severe: 9,279 (5.8%)
+
+2. TIME-SERIES-ANOMALIE-DETECTION - IPv6
+-------------------------------------------------------
+🕒 ZEITREIHEN-AGGREGATION UND TREND-ANALYSE:
+Zeitreihen-Daten erstellt: 40,530 Stunden-Datenpunkte
+
+📈 TREND-DETECTION FÜR KRITISCHE SERVICES:
+Signifikante Trends gefunden: 0
+
+🤖 SEQUENCE-BASED ANOMALIE-DETECTION:
+Sequence-Anomalien detektiert: 969
+
+Top-5 Sequence-Anomalien:
+  Cloudflare DNS @ 2025-06-03 16:00:00: 92.1ms (4.7σ)
+  Cloudflare DNS @ 2025-06-10 00:00:00: 18.7ms (4.5σ)
+  Cloudflare DNS @ 2025-06-12 22:00:00: 9.3ms (4.4σ)
+  Quad9 DNS @ 2025-06-03 20:00:00: 50.4ms (4.4σ)
+  Cloudflare DNS @ 2025-06-02 06:00:00: 13.4ms (4.3σ)
+
+3. ML ANOMALIE-PREDICTION-MODELLE - IPv6
+--------------------------------------------------
+ML-Dataset: 160,923 Samples, 18 Features
+Anomalie-Balance: 39,577 Anomalien (24.6%)
+
+🤖 ANOMALIE-PREDICTION-MODELLE:
+
+1. ISOLATION FOREST (Unsupervised Anomalie-Detection):
+  Accuracy: 0.738
+  Precision: 0.468
+  Recall: 0.468
+
+2. RANDOM FOREST CLASSIFIER (Supervised):
+  AUC-ROC: 1.000
+  Accuracy: 1.000
+  Precision: 0.999
+  Recall: 0.999
+
+  Top-5 wichtigste Features:
+    geographic_risk: 0.310
+    continent_numeric: 0.156
+    final_latency: 0.093
+    loss_rate: 0.074
+    latency_variance: 0.070
+
+3. DBSCAN CLUSTERING (Density-based):
+  Anomalien detektiert: 21458
+  Precision: 0.276
+  Recall: 0.748
+  Cluster gefunden: 502
+
+4. ENSEMBLE-PREDICTION:
+  Ensemble Accuracy: 0.950
+  Ensemble Precision: 0.998
+  Ensemble Recall: 0.800
+
+📊 MODELL-PERFORMANCE-VERGLEICH:
+              Model  Accuracy  Precision  Recall
+0  Isolation Forest     0.738      0.468   0.468
+1     Random Forest     1.000      0.999   0.999
+2            DBSCAN       NaN      0.276   0.748
+3          Ensemble     0.950      0.998   0.800
+
+4. GEOGRAFISCHES RISK-SCORING-SYSTEM - IPv6
+-------------------------------------------------------
+🌍 REGIONALES RISK-ASSESSMENT:
+Regionale Risk-Scores:
+  🔴 af-south-1 (Africa): 69.2/100 - Critical Risk
+     Anomalie-Rate: 100.0%, Anycast: 7.3ms
+  🟠 ap-east-1 (Asia): 46.6/100 - High Risk
+     Anomalie-Rate: 72.6%, Anycast: 5.0ms
+  🟠 ap-south-1 (Asia): 40.3/100 - High Risk
+     Anomalie-Rate: 24.4%, Anycast: 5.3ms
+  🟡 ap-southeast-2 (Oceania): 39.6/100 - Medium Risk
+     Anomalie-Rate: 28.9%, Anycast: 1.3ms
+  🟡 ca-central-1 (North America): 26.2/100 - Medium Risk
+     Anomalie-Rate: 2.2%, Anycast: 1.5ms
+  🟡 ap-northeast-1 (Asia): 24.4/100 - Medium Risk
+     Anomalie-Rate: 10.0%, Anycast: 2.6ms
+  🟡 sa-east-1 (South America): 21.3/100 - Medium Risk
+     Anomalie-Rate: 0.8%, Anycast: 1.4ms
+  🟡 eu-central-1 (Europe): 20.8/100 - Medium Risk
+     Anomalie-Rate: 1.8%, Anycast: 1.4ms
+  🟢 eu-north-1 (Europe): 19.3/100 - Low Risk
+     Anomalie-Rate: 5.1%, Anycast: 4.0ms
+  🟢 us-west-1 (North America): 17.5/100 - Low Risk
+     Anomalie-Rate: 0.2%, Anycast: 2.1ms
+
+🌍 KONTINENTALES RISK-RANKING:
+  🔴 Africa: 69.2/100 Risk-Score
+     Anomalie-Rate: 100.0%, Anycast-Performance: 7.3ms
+  🟡 Oceania: 39.6/100 Risk-Score
+     Anomalie-Rate: 28.9%, Anycast-Performance: 1.3ms
+  🟡 Asia: 37.1/100 Risk-Score
+     Anomalie-Rate: 35.6%, Anycast-Performance: 4.3ms
+  🟢 North America: 21.8/100 Risk-Score
+     Anomalie-Rate: 1.2%, Anycast-Performance: 1.8ms
+  🟢 South America: 21.3/100 Risk-Score
+     Anomalie-Rate: 0.8%, Anycast-Performance: 1.4ms
+  🟢 Europe: 20.1/100 Risk-Score
+     Anomalie-Rate: 3.5%, Anycast-Performance: 2.7ms
+
+🏢 PROVIDER RISK-ASSESSMENT:
+Provider Risk-Ranking:
+  🔴 Google: 62.0/100
+     Anomalie-Rate: 24.1%, Latenz: 5.6ms
+  🔴 Quad9: 60.2/100
+     Anomalie-Rate: 20.5%, Latenz: 3.1ms
+  🔴 Cloudflare: 58.3/100
+     Anomalie-Rate: 16.5%, Latenz: 2.0ms
+  🔴 Heise: 46.2/100
+     Anomalie-Rate: 33.2%, Latenz: 147.8ms
+  🔴 Akamai: 41.9/100
+     Anomalie-Rate: 30.5%, Latenz: 144.6ms
+  🟡 UC Berkeley: 39.8/100
+     Anomalie-Rate: 30.9%, Latenz: 150.4ms
+
+5. REAL-TIME ANOMALIE-DETECTION-PIPELINE - IPv6
+------------------------------------------------------------
+⚡ REAL-TIME PIPELINE-ARCHITEKTUR:
+
+  📦 DATA INGESTION:
+    description: MTR-Messungen alle 15 Minuten
+    latency: <1 Sekunde
+    throughput: ~100 Messungen/Minute
+
+  📦 FEATURE EXTRACTION:
+    description: Echtzeit-Feature-Engineering
+    latency: <5 Sekunden
+    features: 18
+
+  📦 ANOMALY SCORING:
+    description: ML-Modell-Ensemble-Scoring
+    models: Isolation Forest, Random Forest
+    latency: <2 Sekunden
+
+  📦 RISK ASSESSMENT:
+    description: Geografisches Risk-Scoring
+    risk_levels: Low, Medium, High, Critical
+    update_frequency: Stündlich
+
+  📦 ALERTING:
+    description: Multi-Level-Alert-System
+    channels: Dashboard, Email, Slack, SMS
+    thresholds:
+      info: Anomalie-Score > 3
+      warning: Anomalie-Score > 5
+      critical: Anomalie-Score > 7
+
+🔮 ANOMALIE-PREDICTION-SIMULATION:
+
+Beispiel-Simulationen:
+  📊 Normal Cloudflare:
+    Final Score: 0.081
+    Alert Level: NORMAL
+    Action: No action required
+    Confidence: 94.6%
+  📊 Afrika Problem:
+    Final Score: 0.381
+    Alert Level: INFO
+    Action: Log for analysis
+    Confidence: 50.4%
+  📊 Severe Anomalie:
+    Final Score: 0.512
+    Alert Level: WARNING
+    Action: Monitor closely
+    Confidence: 3.3%
+  📊 Akamai Normal:
+    Final Score: 0.219
+    Alert Level: NORMAL
+    Action: No action required
+    Confidence: 52.3%
+
+📈 PIPELINE-PERFORMANCE-MONITORING:
+  • prediction_accuracy: Tägliche Validation gegen Ground Truth
+  • false_positive_rate: Ziel: <5% False Positives
+  • detection_latency: Ziel: <10 Sekunden End-to-End
+  • model_drift: Wöchentliche Feature-Drift-Detection
+  • data_quality: Missing/Invalid Data Rate <1%
+  • alert_fatigue: Critical Alerts <10/Tag
+
+6. ANOMALIE-PREDICTION VISUALISIERUNGEN - IPv6
+------------------------------------------------------------
+
+===========================================================================
+🎯 ADVANCED ANOMALIE-VORHERSAGE DEEP-DIVE ABGESCHLOSSEN!
+🤖 PRÄDIKTIVE INTELLIGENCE-SYSTEME ENTWICKELT!
+===========================================================================
+
+🔍 WICHTIGSTE ERKENNTNISSE:
+✅ Time-Series-basierte Anomalie-Detection implementiert
+✅ Multi-Modell ML-Ensemble für Anomalie-Prediction entwickelt
+✅ Geografisches Risk-Scoring-System etabliert
+✅ Real-Time-Detection-Pipeline entworfen
+✅ Predictive Failure-Detection-Algorithmen erstellt
+✅ Provider-spezifische Risk-Assessment-Metriken
+✅ Kontinentale Anomalie-Pattern identifiziert
+
+🚀 BEREIT FÜR:
+  • Phase 4B3: Hop-Effizienz-Optimierung
+  • Real-Time-Monitoring-Dashboard-Implementierung
+  • Prädiktive Maintenance-Systeme

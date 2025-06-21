@@ -1,0 +1,232 @@
+=== PHASE 3: PERFORMANCE-TRENDS UND ZEITANALYSE ===
+Temporale Muster, Anomalien und Performance-Stabilität
+=================================================================
+
+1. DATEN LADEN UND ZEITREIHEN VORBEREITEN...
+-------------------------------------------------------
+✓ IPv4: 160,923 Messungen
+✓ IPv6: 160,923 Messungen
+
+📅 ZEITREIHEN-VORBEREITUNG - IPv4
+----------------------------------------
+Zeitreihen-Daten erstellt: 160,923 Performance-Punkte
+Zeitspanne: 2025-05-27 12:59:06.053865 bis 2025-06-20 14:31:15.563100
+Abgedeckte Tage: 25
+Eindeutige Services: 7
+
+📅 ZEITREIHEN-VORBEREITUNG - IPv6
+----------------------------------------
+Zeitreihen-Daten erstellt: 160,923 Performance-Punkte
+Zeitspanne: 2025-05-27 12:59:06.053865 bis 2025-06-20 14:31:15.563100
+Abgedeckte Tage: 25
+Eindeutige Services: 7
+
+2. PERFORMANCE-STABILITÄT ANALYSE - IPv4
+--------------------------------------------------
+
+📊 LANGZEIT-STABILITÄT (über 25 Tage):
+
+  ANYCAST Services:
+    Cloudflare CDN: 1.9ms (CV=1.28) 🔴 Instabil
+      Packet Loss: 0.0%
+    Cloudflare DNS: 1.7ms (CV=0.91) 🔴 Instabil
+      Packet Loss: 0.0%
+    Google DNS: 3.7ms (CV=1.92) 🔴 Instabil
+      Packet Loss: 0.0%
+    Quad9 DNS: 2.9ms (CV=1.65) 🔴 Instabil
+      Packet Loss: 0.3%
+
+  PSEUDO-ANYCAST Services:
+    Akamai CDN: 145.6ms (CV=0.52) 🟡 Moderat stabil
+      Packet Loss: 0.0%
+
+  UNICAST Services:
+    Berkeley NTP: 159.3ms (CV=0.52) 🟡 Moderat stabil
+      Packet Loss: 0.1%
+    Heise: 148.0ms (CV=0.61) 🟡 Moderat stabil
+      Packet Loss: 0.1%
+
+📈 PERFORMANCE-TRENDS:
+  Anycast Trend: -0.003ms/Tag (R²=0.020, p=0.505)
+  Unicast Trend: -0.018ms/Tag (R²=0.019, p=0.515)
+  ✅ Anycast-Performance über Zeit stabil
+
+2. PERFORMANCE-STABILITÄT ANALYSE - IPv6
+--------------------------------------------------
+
+📊 LANGZEIT-STABILITÄT (über 25 Tage):
+
+  ANYCAST Services:
+    Cloudflare CDN: 2.0ms (CV=0.95) 🔴 Instabil
+      Packet Loss: 0.0%
+    Cloudflare DNS: 2.0ms (CV=0.93) 🔴 Instabil
+      Packet Loss: 0.0%
+    Google DNS: 5.5ms (CV=1.82) 🔴 Instabil
+      Packet Loss: 0.1%
+    Quad9 DNS: 3.1ms (CV=1.24) 🔴 Instabil
+      Packet Loss: 0.0%
+
+  PSEUDO-ANYCAST Services:
+    Akamai CDN: 144.7ms (CV=0.53) 🟡 Moderat stabil
+      Packet Loss: 0.0%
+
+  UNICAST Services:
+    Berkeley NTP: 150.4ms (CV=0.49) 🟡 Moderat stabil
+      Packet Loss: 0.1%
+    Heise: 147.8ms (CV=0.59) 🟡 Moderat stabil
+      Packet Loss: 0.1%
+
+📈 PERFORMANCE-TRENDS:
+  Anycast Trend: -0.005ms/Tag (R²=0.003, p=0.806)
+  Unicast Trend: -0.022ms/Tag (R²=0.023, p=0.465)
+  ✅ Anycast-Performance über Zeit stabil
+
+3. TEMPORALE MUSTER-ANALYSE - IPv4
+--------------------------------------------------
+
+🕐 TAGESZEIT-MUSTER (24h-Zyklus):
+  Peak Hours (6 schlechteste): [5, 6, 16, 17, 18, 19]
+  Off-Peak Hours (6 beste): [1, 2, 3, 9, 11, 15]
+  Peak vs. Off-Peak Latenz: 2.6ms vs. 2.5ms
+  ✅ Stabile 24h-Performance
+
+📅 WOCHENTAG-MUSTER:
+  Bester Tag: Saturday (2.5ms)
+  Schlechtester Tag: Tuesday (2.7ms)
+  Wochenende vs. Werktage: 2.5ms vs. 2.6ms
+
+🏢 PROVIDER-SPEZIFISCHE TEMPORALE MUSTER:
+  Quad9: 1.2x Tageszeit-Variation
+    ✅ Niedrige zeitliche Variabilität
+  Google: 1.1x Tageszeit-Variation
+    ✅ Niedrige zeitliche Variabilität
+  Cloudflare: 1.3x Tageszeit-Variation
+    ✅ Niedrige zeitliche Variabilität
+
+3. TEMPORALE MUSTER-ANALYSE - IPv6
+--------------------------------------------------
+
+🕐 TAGESZEIT-MUSTER (24h-Zyklus):
+  Peak Hours (6 schlechteste): [0, 6, 16, 17, 18, 19]
+  Off-Peak Hours (6 beste): [3, 8, 20, 21, 22, 23]
+  Peak vs. Off-Peak Latenz: 3.3ms vs. 3.1ms
+  ✅ Stabile 24h-Performance
+
+📅 WOCHENTAG-MUSTER:
+  Bester Tag: Thursday (2.7ms)
+  Schlechtester Tag: Tuesday (3.6ms)
+  Wochenende vs. Werktage: 3.3ms vs. 3.2ms
+
+🏢 PROVIDER-SPEZIFISCHE TEMPORALE MUSTER:
+  Quad9: 1.1x Tageszeit-Variation
+    ✅ Niedrige zeitliche Variabilität
+  Google: 1.1x Tageszeit-Variation
+    ✅ Niedrige zeitliche Variabilität
+  Cloudflare: 1.4x Tageszeit-Variation
+    ✅ Niedrige zeitliche Variabilität
+
+4. ANOMALIE-DETEKTION - IPv4
+----------------------------------------
+
+🚨 ANOMALIEN ENTDECKT: 8885 Ereignisse
+
+Anomalien pro Service:
+  Quad9 DNS: 2402 Anomalien
+  Google DNS: 2309 Anomalien
+  Cloudflare CDN: 2090 Anomalien
+  Cloudflare DNS: 2027 Anomalien
+  Heise: 34 Anomalien
+  Akamai CDN: 13 Anomalien
+  Berkeley NTP: 10 Anomalien
+
+🔴 SCHWERE ANOMALIEN: 4717
+Problematische Tage:
+  2025-05-29: 221 schwere Anomalien
+  2025-06-03: 215 schwere Anomalien
+  2025-06-18: 201 schwere Anomalien
+  2025-06-12: 200 schwere Anomalien
+  2025-06-10: 199 schwere Anomalien
+
+📊 ANOMALIEN NACH SERVICE-TYP:
+  anycast: 9.600% Anomalie-Rate
+  pseudo-anycast: 0.057% Anomalie-Rate
+  unicast: 0.096% Anomalie-Rate
+
+4. ANOMALIE-DETEKTION - IPv6
+----------------------------------------
+
+🚨 ANOMALIEN ENTDECKT: 9125 Ereignisse
+
+Anomalien pro Service:
+  Google DNS: 2935 Anomalien
+  Quad9 DNS: 2335 Anomalien
+  Cloudflare CDN: 2024 Anomalien
+  Cloudflare DNS: 1797 Anomalien
+  Heise: 26 Anomalien
+  Berkeley NTP: 6 Anomalien
+  Akamai CDN: 2 Anomalien
+
+🔴 SCHWERE ANOMALIEN: 5221
+Problematische Tage:
+  2025-06-10: 297 schwere Anomalien
+  2025-06-09: 290 schwere Anomalien
+  2025-06-07: 289 schwere Anomalien
+  2025-06-06: 288 schwere Anomalien
+  2025-06-08: 288 schwere Anomalien
+
+📊 ANOMALIEN NACH SERVICE-TYP:
+  anycast: 9.886% Anomalie-Rate
+  pseudo-anycast: 0.009% Anomalie-Rate
+  unicast: 0.070% Anomalie-Rate
+
+5. ZEITREIHEN-VISUALISIERUNGEN - IPv4
+--------------------------------------------------
+5. ZEITREIHEN-VISUALISIERUNGEN - IPv6
+--------------------------------------------------
+
+6. STATISTISCHE SIGNIFIKANZ-ANALYSE
+---------------------------------------------
+
+📊 ROBUSTHEIT DER ANYCAST-EFFIZIENZ:
+  IPv4 Anycast vs. Unicast:
+    p-Wert: 0.00e+00
+    Effect Size: 0.991
+    Signifikanz: ✅ Hoch signifikant
+  IPv6 Anycast vs. Unicast:
+    p-Wert: 0.00e+00
+    Effect Size: 0.989
+    Signifikanz: ✅ Hoch signifikant
+
+🔄 IPv4 vs. IPv6 ANYCAST-VERGLEICH:
+    p-Wert: 0.00e+00
+    Signifikanz: ✅ Signifikanter Unterschied
+
+📏 STICHPROBEN-GRÖSSEN:
+  IPv4:
+    anycast: 91,956 Messungen
+    unicast: 45,978 Messungen
+    pseudo-anycast: 22,989 Messungen
+  IPv6:
+    anycast: 91,956 Messungen
+    unicast: 45,978 Messungen
+    pseudo-anycast: 22,989 Messungen
+
+=================================================================
+ZUSAMMENFASSUNG PHASE 3: PERFORMANCE-TRENDS UND ZEITANALYSE
+=================================================================
+✓ Zeitreihen-Daten für komplette Messperiode (3+ Wochen) analysiert
+✓ Performance-Stabilität über Zeit gemessen und bewertet
+✓ Tageszeit- und Wochentag-Muster identifiziert (Peak vs. Off-Peak)
+✓ Provider-spezifische temporale Variabilität analysiert
+✓ Anomalie-Detektion durchgeführt und Ausfälle kategorisiert
+✓ Umfassende Zeitreihen-Visualisierungen erstellt
+✓ Statistische Signifikanz der Anycast-Effizienz bestätigt
+✓ Robustheit der Forschungserkenntnisse validiert
+
+🎯 ANYCAST-FORSCHUNG VOLLSTÄNDIG ABGESCHLOSSEN!
+Alle drei Phasen durchgeführt - bereit für Präsentation und Paper!
+
+Nächste Schritte:
+  • Kernerkenntnisse für Präsentation zusammenfassen
+  • Wissenschaftliches Paper strukturieren
+  • Visualisierungen für Publikation optimieren

@@ -1,0 +1,272 @@
+=== PHASE 1: DATENVERSTÄNDNIS & ÜBERBLICK ===
+Autor: MTR Anycast Routing Analyse
+Datum: 2025-06-21 15:25:40
+============================================================
+
+1. DATEN LADEN...
+------------------------------
+✓ IPv4 Daten geladen: 160,923 Zeilen, 10 Spalten
+✓ IPv6 Daten geladen: 160,923 Zeilen, 10 Spalten
+
+2. DATENSTRUKTUR - IPv4
+----------------------------------------
+Spalten:
+  - id: object
+  - utctime: datetime64[ns]
+  - bitpattern: object
+  - src: object
+  - psize: int32
+  - dst: object
+  - tos: int32
+  - tests: int32
+  - region: object
+  - hubs: object
+
+Speicherverbrauch: 74.89 MB
+Zeitraum: 2025-05-27 12:59:06.053865 bis 2025-06-20 14:31:15.563100
+
+Eindeutige Werte:
+  - src: 2510 eindeutige Werte
+  - dst: 7 eindeutige Werte
+    ['1.1.1.1', '104.16.123.96', '169.229.128.134', '193.99.144.85', '2.16.241.219', '8.8.8.8', '9.9.9.9']
+  - region: 10 eindeutige Werte
+    ['af-south-1', 'ap-east-1', 'ap-northeast-1', 'ap-south-1', 'ap-southeast-2', 'ca-central-1', 'eu-central-1', 'eu-north-1', 'sa-east-1', 'us-west-1']
+
+2. DATENSTRUKTUR - IPv6
+----------------------------------------
+Spalten:
+  - id: object
+  - utctime: datetime64[ns]
+  - bitpattern: object
+  - src: object
+  - psize: int32
+  - dst: object
+  - tos: int32
+  - tests: int32
+  - region: object
+  - hubs: object
+
+Speicherverbrauch: 76.84 MB
+Zeitraum: 2025-05-27 12:59:06.053865 bis 2025-06-20 14:31:15.563100
+
+Eindeutige Werte:
+  - src: 2510 eindeutige Werte
+  - dst: 7 eindeutige Werte
+    ['2001:4860:4860::8888', '2606:4700:4700::1111', '2606:4700::6810:7b60', '2607:f140:ffff:8000:0:8006:0:a', '2620:fe::fe:9', '2a02:26f0:3500:1b::1724:a393', '2a02:2e0:3fe:1001:7777:772e:2:85']
+  - region: 10 eindeutige Werte
+    ['af-south-1', 'ap-east-1', 'ap-northeast-1', 'ap-south-1', 'ap-southeast-2', 'ca-central-1', 'eu-central-1', 'eu-north-1', 'sa-east-1', 'us-west-1']
+
+3. DATENQUALITÄT - IPv4
+----------------------------------------
+✓ Keine fehlenden Werte in Hauptspalten
+Duplikate (ohne hubs): 0 (0.00%)
+Große Zeitlücken (>30min): 4
+Größte Lücken:
+  - 0 days 00:59:22.624005
+  - 0 days 00:59:21.769730
+  - 0 days 00:59:21.400414
+  - 0 days 00:36:31.537095
+
+3. DATENQUALITÄT - IPv6
+----------------------------------------
+✓ Keine fehlenden Werte in Hauptspalten
+Duplikate (ohne hubs): 0 (0.00%)
+Große Zeitlücken (>30min): 4
+Größte Lücken:
+  - 0 days 00:59:22.624005
+  - 0 days 00:59:21.769730
+  - 0 days 00:59:21.400414
+  - 0 days 00:36:31.537095
+
+4. GRUNDSTATISTIKEN - IPv4
+----------------------------------------
+Messungen pro AWS Region:
+  - af-south-1: 16,100
+  - ap-east-1: 16,093
+  - ap-northeast-1: 16,058
+  - ap-south-1: 16,107
+  - ap-southeast-2: 16,079
+  - ca-central-1: 16,107
+  - eu-central-1: 16,086
+  - eu-north-1: 16,100
+  - sa-east-1: 16,093
+  - us-west-1: 16,100
+
+Quelle-Details:
+  - Eindeutige IP-Adressen pro Region: 251
+  - Gesamte Source-IPs: 2,510
+
+Messungen pro Ziel-IP:
+  - 193.99.144.85: 22,989
+  - 9.9.9.9: 22,989
+  - 169.229.128.134: 22,989
+  - 8.8.8.8: 22,989
+  - 2.16.241.219: 22,989
+  - 1.1.1.1: 22,989
+  - 104.16.123.96: 22,989
+
+Zeitliche Abdeckung:
+  - Stunden abgedeckt: 24/24
+  - Wochentage: 7/7
+
+Hops-Statistiken:
+  - Durchschnittliche Anzahl Hops: 11.86
+  - Min Hops: 2
+  - Max Hops: 30
+
+4. GRUNDSTATISTIKEN - IPv6
+----------------------------------------
+Messungen pro AWS Region:
+  - af-south-1: 16,100
+  - ap-east-1: 16,093
+  - ap-northeast-1: 16,058
+  - ap-south-1: 16,107
+  - ap-southeast-2: 16,079
+  - ca-central-1: 16,107
+  - eu-central-1: 16,086
+  - eu-north-1: 16,100
+  - sa-east-1: 16,093
+  - us-west-1: 16,100
+
+Quelle-Details:
+  - Eindeutige IP-Adressen pro Region: 251
+  - Gesamte Source-IPs: 2,510
+
+Messungen pro Ziel-IP:
+  - 2620:fe::fe:9: 22,989
+  - 2001:4860:4860::8888: 22,989
+  - 2606:4700:4700::1111: 22,989
+  - 2607:f140:ffff:8000:0:8006:0:a: 22,989
+  - 2a02:2e0:3fe:1001:7777:772e:2:85: 22,989
+  - 2a02:26f0:3500:1b::1724:a393: 22,989
+  - 2606:4700::6810:7b60: 22,989
+
+Zeitliche Abdeckung:
+  - Stunden abgedeckt: 24/24
+  - Wochentage: 7/7
+
+Hops-Statistiken:
+  - Durchschnittliche Anzahl Hops: 12.60
+  - Min Hops: 4
+  - Max Hops: 30
+
+5. ERSTE VISUALISIERUNGEN - IPv4
+----------------------------------------
+5. ERSTE VISUALISIERUNGEN - IPv6
+----------------------------------------
+
+6. HUBS-DATEN EXPLORATION - IPv4
+----------------------------------------
+Beispiel Hub-Struktur:
+Verfügbare Metriken pro Hub:
+  - Loss%: 0.0
+  - Rcv: 5
+  - Jint: 149.7
+  - count: 1
+  - Jttr: 110.98
+  - Javg: 31.499
+  - Drop: 0
+  - Last: 113.01
+  - Avg: 34.936
+  - StDev: 47.718
+  - Wrst: 113.01
+  - Gmean: 11.952
+  - host: ec2-52-60-0-83.ca-central-1.compute.amazonaws.com (52.60.0.83)
+  - Snt: 5
+  - Jmax: 110.98
+  - Best: 2.028
+  - ASN: AS16509
+  Verarbeitet: 1,000 Zeilen...
+  Verarbeitet: 2,000 Zeilen...
+  [...]
+  Verarbeitet: 159,000 Zeilen...
+  Verarbeitet: 160,000 Zeilen...
+
+Hub-Daten erstellt: 1,908,628 Hops von 160923 Messungen
+
+Statistiken für Hub-Metriken:
+              Avg        Best        Wrst       Loss%         Snt         Rcv
+count  1908628.00  1908628.00  1908628.00  1908628.00  1908628.00  1908628.00
+mean        57.75       55.27       62.86       15.91        5.00        4.20
+std        122.11      116.50      131.07       35.88        0.03        1.79
+min          0.00        0.00        0.00        0.00        0.00        0.00
+25%          0.97        0.69        1.10        0.00        5.00        5.00
+50%          3.17        1.72        4.94        0.00        5.00        5.00
+75%         98.24       93.63      106.96        0.00        5.00        5.00
+max       9093.00     9093.00     9093.00      100.00        5.00        5.00
+
+6. HUBS-DATEN EXPLORATION - IPv6
+----------------------------------------
+Beispiel Hub-Struktur:
+Verfügbare Metriken pro Hub:
+  - Loss%: 100.0
+  - Rcv: 0
+  - Jint: 0.0
+  - count: 1
+  - Jttr: 0.0
+  - Javg: 0.0
+  - Drop: 5
+  - Last: 0.0
+  - Avg: 0.0
+  - StDev: 0.0
+  - Wrst: 0.0
+  - Gmean: 0.0
+  - host: ???
+  - Snt: 5
+  - Jmax: 0.0
+  - Best: 0.0
+  - ASN: AS???
+  Verarbeitet: 1,000 Zeilen...
+  Verarbeitet: 2,000 Zeilen...
+  [...]
+  Verarbeitet: 159,000 Zeilen...
+  Verarbeitet: 160,000 Zeilen...
+
+Hub-Daten erstellt: 2,027,376 Hops von 160923 Messungen
+
+Statistiken für Hub-Metriken:
+              Avg        Best        Wrst       Loss%         Snt         Rcv
+count  2027376.00  2027376.00  2027376.00  2027376.00  2027376.00  2027376.00
+mean        46.25       44.25       50.72       17.95        5.00        4.10
+std        105.30      100.72      112.30       37.71        0.07        1.89
+min          0.00        0.00        0.00        0.00        0.00        0.00
+25%          0.88        0.50        1.08        0.00        5.00        5.00
+50%          2.58        1.47        3.42        0.00        5.00        5.00
+75%         35.85       31.60       62.19        0.00        5.00        5.00
+max       5550.60     3517.60     7877.00      100.00        5.00        5.00
+
+============================================================
+ERSTE INTERESSANTE ERKENNTNISSE
+============================================================
+
+🔍 PROTOKOLL-VERGLEICH:
+  - IPv4 durchschn. Hops: 11.86
+  - IPv6 durchschn. Hops: 12.60
+  - IPv6 benötigt ~6.2% mehr Hops
+
+📊 DATENQUALITÄT:
+  - Perfekte Balance: Jede Ziel-IP exakt 22,989 mal gemessen
+  - 16092 Messungen pro AWS-Region (ideal verteilt)
+  - Nur 4 größere Zeitlücken in 3+ Wochen (sehr zuverlässig)
+
+🌐 NETZWERK-CHARAKTERISTIKA:
+  - Durchschnittlicher Packet Loss: 15.9%
+  - Höchste beobachtete Latenz: 9093ms
+  - Niedrigste beobachtete Latenz: 0.15ms
+
+============================================================
+ZUSAMMENFASSUNG PHASE 1: DATENVERSTÄNDNIS
+============================================================
+✓ IPv4 Daten: 160,923 Messungen
+  - 2510 AWS Regionen
+  - 7 Ziel-IPs
+✓ IPv6 Daten: 160,923 Messungen
+  - 2510 AWS Regionen
+  - 7 Ziel-IPs
+✓ Datenqualität geprüft
+✓ Zeitliche Abdeckung analysiert
+✓ Hub-Strukturen verstanden
+✓ Erste Visualisierungen erstellt
+
+🔄 BEREIT FÜR PHASE 2: GEOGRAFISCHE ROUTING-ANALYSE
+Führen Sie das nächste Notebook aus, wenn diese Phase abgeschlossen ist.

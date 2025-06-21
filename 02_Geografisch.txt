@@ -1,0 +1,303 @@
+=== PHASE 2: GEOGRAFISCHE ROUTING-ANALYSE (ÜBERARBEITET) ===
+Anycast vs. Unicast: Routing-Pfade und geografische Effizienz
+======================================================================
+
+1. DATEN LADEN UND SERVICE-KLASSIFIKATION...
+--------------------------------------------------
+✓ IPv4: 160,923 Messungen
+✓ IPv6: 160,923 Messungen
+
+📊 SERVICE-KLASSIFIKATION (KORRIGIERT):
+✓ Echte Anycast Services: 8 (DNS + CDN)
+⚠️ Pseudo-Anycast/CDN: 2 (Akamai - unicast-ähnliche Performance)
+✓ Unicast Reference: 4 (Heise, Berkeley)
+
+2. TRACEROUTE-PFAD-ANALYSE - IPv4
+--------------------------------------------------
+  Analysiert: 50,000 Traceroutes...
+  Analysiert: 100,000 Traceroutes...
+  Analysiert: 150,000 Traceroutes...
+
+Traceroute-Analyse abgeschlossen: 160,923 Pfade
+
+🛣️ ROUTING-PFAD-DIVERSITÄT:
+
+📡 ANYCAST SERVICES:
+  Quad9 DNS:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 2.2
+    Durchschn. Hops: 6.5 (±2.1)
+  Google DNS:
+    Eindeutige ASNs gesamt: 2
+    Durchschn. ASNs pro Region: 1.8
+    Durchschn. Hops: 6.4 (±0.6)
+  Cloudflare DNS:
+    Eindeutige ASNs gesamt: 8
+    Durchschn. ASNs pro Region: 2.7
+    Durchschn. Hops: 8.8 (±1.7)
+  Cloudflare CDN:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 2.5
+    Durchschn. Hops: 8.9 (±1.7)
+
+🏢 UNICAST REFERENCE SERVICES:
+  Heise:
+    Eindeutige ASNs: 6
+    ASN-Konsistenz: 82.9%
+  Berkeley NTP:
+    Eindeutige ASNs: 10
+    ASN-Konsistenz: 80.4%
+
+2. TRACEROUTE-PFAD-ANALYSE - IPv6
+--------------------------------------------------
+  Analysiert: 50,000 Traceroutes...
+  Analysiert: 100,000 Traceroutes...
+  Analysiert: 150,000 Traceroutes...
+
+Traceroute-Analyse abgeschlossen: 160,923 Pfade
+
+🛣️ ROUTING-PFAD-DIVERSITÄT:
+
+📡 ANYCAST SERVICES:
+  Quad9 DNS:
+    Eindeutige ASNs gesamt: 6
+    Durchschn. ASNs pro Region: 3.0
+    Durchschn. Hops: 9.5 (±2.1)
+  Google DNS:
+    Eindeutige ASNs gesamt: 4
+    Durchschn. ASNs pro Region: 2.3
+    Durchschn. Hops: 7.5 (±2.6)
+  Cloudflare DNS:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 2.5
+    Durchschn. Hops: 10.2 (±2.1)
+  Cloudflare CDN:
+    Eindeutige ASNs gesamt: 6
+    Durchschn. ASNs pro Region: 2.6
+    Durchschn. Hops: 9.1 (±2.0)
+
+🏢 UNICAST REFERENCE SERVICES:
+  Berkeley NTP:
+    Eindeutige ASNs: 5
+    ASN-Konsistenz: 88.6%
+  Heise:
+    Eindeutige ASNs: 7
+    ASN-Konsistenz: 82.9%
+
+3. ANYCAST-EFFIZIENZ ANALYSE - IPv4
+--------------------------------------------------
+Latenz-Daten extrahiert: 160,923 Messungen
+
+🚀 ECHTE ANYCAST vs. PSEUDO-ANYCAST vs. UNICAST VERGLEICH:
+
+📊 LATENZ-STATISTIKEN:
+  Echte Anycast Services:
+    Durchschnitt: 2.5ms
+    Median: 1.5ms
+    Standardabweichung: 5.2ms
+  Pseudo-Anycast/CDN (Akamai):
+    Durchschnitt: 145.6ms
+    Median: 161.1ms
+    Standardabweichung: 75.4ms
+  Unicast Reference:
+    Durchschnitt: 153.7ms
+    Median: 156.3ms
+    Standardabweichung: 86.5ms
+
+🎯 ECHTE ANYCAST-EFFIZIENZ: 60.4x schneller als Unicast
+⚠️ PSEUDO-ANYCAST-EFFIZIENZ: 1.1x vs. Unicast (minimal)
+🚀 ECHTE ANYCAST vs. PSEUDO-ANYCAST: 57.2x Unterschied
+
+🏆 PROVIDER-RANKING (NACH KATEGORIEN):
+  Echte Anycast Provider:
+    Cloudflare: 1.8ms (±3.6ms, n=45978)
+    Quad9: 2.8ms (±5.5ms, n=22989)
+    Google: 3.7ms (±7.1ms, n=22989)
+  Pseudo-Anycast/CDN:
+    Akamai: 145.6ms (±75.4ms, n=22989) ⚠️
+
+🌍 KONTINENTALE ANYCAST-EFFIZIENZ:
+  South America: 282.2x Verbesserung
+    Anycast: 0.7ms, Unicast: 193.4ms
+  Oceania: 226.9x Verbesserung
+    Anycast: 1.0ms, Unicast: 217.0ms
+  Asia: 64.4x Verbesserung
+    Anycast: 2.8ms, Unicast: 183.2ms
+  North America: 55.4x Verbesserung
+    Anycast: 1.5ms, Unicast: 84.8ms
+  Europe: 36.7x Verbesserung
+    Anycast: 2.4ms, Unicast: 87.1ms
+  Africa: 31.2x Verbesserung
+    Anycast: 7.5ms, Unicast: 233.3ms
+
+3. ANYCAST-EFFIZIENZ ANALYSE - IPv6
+--------------------------------------------------
+Latenz-Daten extrahiert: 160,923 Messungen
+
+🚀 ECHTE ANYCAST vs. PSEUDO-ANYCAST vs. UNICAST VERGLEICH:
+
+📊 LATENZ-STATISTIKEN:
+  Echte Anycast Services:
+    Durchschnitt: 3.2ms
+    Median: 1.6ms
+    Standardabweichung: 7.2ms
+  Pseudo-Anycast/CDN (Akamai):
+    Durchschnitt: 144.6ms
+    Median: 161.4ms
+    Standardabweichung: 77.1ms
+  Unicast Reference:
+    Durchschnitt: 149.1ms
+    Median: 151.2ms
+    Standardabweichung: 80.8ms
+
+🎯 ECHTE ANYCAST-EFFIZIENZ: 46.7x schneller als Unicast
+⚠️ PSEUDO-ANYCAST-EFFIZIENZ: 1.0x vs. Unicast (minimal)
+🚀 ECHTE ANYCAST vs. PSEUDO-ANYCAST: 45.3x Unterschied
+
+🏆 PROVIDER-RANKING (NACH KATEGORIEN):
+  Echte Anycast Provider:
+    Cloudflare: 2.0ms (±4.5ms, n=45978)
+    Quad9: 3.1ms (±3.9ms, n=22989)
+    Google: 5.6ms (±12.0ms, n=22989)
+  Pseudo-Anycast/CDN:
+    Akamai: 144.6ms (±77.1ms, n=22989) ⚠️
+
+🌍 KONTINENTALE ANYCAST-EFFIZIENZ:
+  Oceania: 170.1x Verbesserung
+    Anycast: 1.3ms, Unicast: 216.9ms
+  South America: 140.5x Verbesserung
+    Anycast: 1.4ms, Unicast: 193.2ms
+  North America: 47.2x Verbesserung
+    Anycast: 1.8ms, Unicast: 85.0ms
+  Asia: 41.4x Verbesserung
+    Anycast: 4.3ms, Unicast: 178.9ms
+  Europe: 30.5x Verbesserung
+    Anycast: 2.7ms, Unicast: 81.9ms
+  Africa: 28.7x Verbesserung
+    Anycast: 7.3ms, Unicast: 210.7ms
+
+4. GEOGRAFISCHE ROUTING-INTELLIGENZ - IPv4
+--------------------------------------------------
+
+🧠 ROUTING-INTELLIGENZ-ANALYSE:
+
+📊 LATENZ-KONSISTENZ (niedrigere Varianz = bessere geo. Optimierung):
+
+  Anycast Services (Variationskoeffizient):
+    Cloudflare DNS: CV=1.18 (σ=2.0ms, μ=1.7ms)
+    Google DNS: CV=1.92 (σ=7.1ms, μ=3.7ms)
+    Quad9 DNS: CV=1.96 (σ=5.5ms, μ=2.8ms)
+    Cloudflare CDN: CV=2.47 (σ=4.7ms, μ=1.9ms)
+
+  Unicast Services (Variationskoeffizient):
+    Berkeley NTP: CV=0.52 (σ=82.2ms, μ=159.3ms)
+    Heise: CV=0.61 (σ=90.2ms, μ=148.0ms)
+
+🎯 BESTE SERVICES PRO REGION:
+  af-south-1: Quad9 DNS (1.6ms)
+  ap-east-1: Google DNS (1.0ms)
+  ap-northeast-1: Google DNS (2.3ms)
+  ap-south-1: Cloudflare DNS (0.9ms)
+  ap-southeast-2: Google DNS (0.7ms)
+  ca-central-1: Google DNS (1.1ms)
+  eu-central-1: Google DNS (1.0ms)
+  eu-north-1: Quad9 DNS (2.5ms)
+  sa-east-1: Google DNS (0.5ms)
+  us-west-1: Google DNS (1.8ms)
+
+⭐ GEOGRAPHIC EFFICIENCY SCORE:
+  Quad9 DNS: 79.0/100
+    Latenz-Verbesserung: 98.1%
+    Konsistenz-Score: 34.2%
+  Google DNS: 78.6/100
+    Latenz-Verbesserung: 97.6%
+    Konsistenz-Score: 34.3%
+  Cloudflare DNS: 82.9/100
+    Latenz-Verbesserung: 98.9%
+    Konsistenz-Score: 45.7%
+  Cloudflare CDN: 77.8/100
+    Latenz-Verbesserung: 98.8%
+    Konsistenz-Score: 29.0%
+
+4. GEOGRAFISCHE ROUTING-INTELLIGENZ - IPv6
+--------------------------------------------------
+
+🧠 ROUTING-INTELLIGENZ-ANALYSE:
+
+📊 LATENZ-KONSISTENZ (niedrigere Varianz = bessere geo. Optimierung):
+
+  Anycast Services (Variationskoeffizient):
+    Quad9 DNS: CV=1.26 (σ=3.9ms, μ=3.1ms)
+    Google DNS: CV=2.14 (σ=12.0ms, μ=5.6ms)
+    Cloudflare DNS: CV=2.2 (σ=4.4ms, μ=2.0ms)
+    Cloudflare CDN: CV=2.25 (σ=4.5ms, μ=2.0ms)
+
+  Unicast Services (Variationskoeffizient):
+    Berkeley NTP: CV=0.49 (σ=73.3ms, μ=150.4ms)
+    Heise: CV=0.59 (σ=87.6ms, μ=147.8ms)
+
+🎯 BESTE SERVICES PRO REGION:
+  af-south-1: Quad9 DNS (1.5ms)
+  ap-east-1: Google DNS (1.2ms)
+  ap-northeast-1: Cloudflare DNS (2.5ms)
+  ap-south-1: Cloudflare CDN (1.0ms)
+  ap-southeast-2: Quad9 DNS (1.1ms)
+  ca-central-1: Google DNS (1.4ms)
+  eu-central-1: Google DNS (1.0ms)
+  eu-north-1: Quad9 DNS (3.4ms)
+  sa-east-1: Google DNS (1.2ms)
+  us-west-1: Cloudflare DNS (2.0ms)
+
+⭐ GEOGRAPHIC EFFICIENCY SCORE:
+  Quad9 DNS: 81.9/100
+    Latenz-Verbesserung: 97.9%
+    Konsistenz-Score: 44.4%
+  Google DNS: 76.9/100
+    Latenz-Verbesserung: 96.2%
+    Konsistenz-Score: 31.8%
+  Cloudflare DNS: 78.5/100
+    Latenz-Verbesserung: 98.6%
+    Konsistenz-Score: 31.4%
+  Cloudflare CDN: 78.5/100
+    Latenz-Verbesserung: 98.6%
+    Konsistenz-Score: 31.4%
+
+5. VISUALISIERUNGEN - IPv4
+----------------------------------------
+5. VISUALISIERUNGEN - IPv6
+----------------------------------------
+
+6. IPv4 vs IPv6 PROTOKOLL-VERGLEICH
+--------------------------------------------------
+
+📊 ECHTE ANYCAST-PERFORMANCE PROTOKOLL-VERGLEICH:
+  IPv4 Echte Anycast: 2.5ms (±5.2ms)
+  IPv6 Echte Anycast: 3.2ms (±7.2ms)
+  IPv6 Performance-Gap: +25.5%
+  ⚠️ IPv6 signifikant langsamer - Infrastruktur-Gap
+
+📊 PSEUDO-ANYCAST (AKAMAI) PROTOKOLL-VERGLEICH:
+  IPv4 Akamai: 145.6ms (±75.4ms)
+  IPv6 Akamai: 144.6ms (±77.1ms)
+  IPv6 Performance-Gap: -0.6%
+  💡 Akamai zeigt ähnliche Unicast-Performance in beiden Protokollen
+
+🏢 ECHTE ANYCAST PROVIDER-PROTOKOLL-VERGLEICH:
+  Cloudflare: IPv4=1.8ms, IPv6=2.0ms (+12.2%)
+  Google: IPv4=3.7ms, IPv6=5.6ms (+51.9%)
+  Quad9: IPv4=2.8ms, IPv6=3.1ms (+8.5%)
+
+======================================================================
+ZUSAMMENFASSUNG PHASE 2: GEOGRAFISCHE ROUTING-ANALYSE
+======================================================================
+✓ Korrekte Service-Klassifikation: Echte Anycast vs. Pseudo-Anycast vs. Unicast
+✓ Akamai als Pseudo-Anycast identifiziert (unicast-ähnliche Performance)
+✓ Traceroute-Pfade und ASN-Diversität analysiert
+✓ Echte Anycast-Effizienz quantifiziert (ohne Akamai-Verzerrung)
+✓ Geografische Routing-Intelligenz bewertet
+✓ Bereinigte Provider-Performance-Rankings erstellt
+✓ IPv4 vs. IPv6 Infrastruktur-Unterschiede für alle Kategorien aufgedeckt
+✓ Umfassende Visualisierungen mit korrekter Service-Kategorisierung
+
+🔄 BEREIT FÜR PHASE 3: PERFORMANCE-VERGLEICHE UND ZEITANALYSE
+Führen Sie das nächste Notebook aus für detaillierte Performance-Trends.
