@@ -7,15 +7,17 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "pyspark (>=4.0.0,<5.0.0)"
-]
+dependencies = ["pyspark (>=4.0.0,<5.0.0)", "numpy (==2.3.0)", "pandas (>=2.3.0,<3.0.0)", "pyarrow (>=20.0.0,<21.0.0)"]
 
 [tool.poetry]
-packages = [{include = "iperfcdn_stats", from = "src"}]
+packages = [
+    {include = "iperfcdn_stats", from = "src"},
+    {include = "convert", from = "src"}
+    ]
 
 [project.scripts]
 start = "iperfcdn_stats.__main__:main"
+convert = "convert.__main__:main"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
