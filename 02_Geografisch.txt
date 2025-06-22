@@ -1,0 +1,286 @@
+=== PHASE 2: GEOGRAFISCHE ROUTING-ANALYSE (METHODISCH VERBESSERT) ===
+Anycast vs. Unicast: Routing-Pfade und geografische Effizienz
+=====================================================================================
+
+📋 ERWEITERTE SERVICE-KLASSIFIKATION:
+-------------------------------------------------------
+
+IPv4:
+  ANYCAST: Cloudflare DNS (DNS)
+  ANYCAST: Google DNS (DNS)
+  ANYCAST: Quad9 DNS (DNS)
+  ANYCAST: Cloudflare CDN (CDN)
+  PSEUDO-ANYCAST: Akamai CDN (CDN)
+  UNICAST: Heise (Web)
+  UNICAST: Berkeley NTP (NTP)
+
+IPv6:
+  ANYCAST: Cloudflare DNS (DNS)
+  ANYCAST: Google DNS (DNS)
+  ANYCAST: Quad9 DNS (DNS)
+  ANYCAST: Cloudflare CDN (CDN)
+  PSEUDO-ANYCAST: Akamai CDN (CDN)
+  UNICAST: Heise (Web)
+  UNICAST: Berkeley NTP (NTP)
+
+1. DATEN LADEN UND ERWEITERTE AUFBEREITUNG...
+-------------------------------------------------------
+✓ IPv4: 160,923 Messungen
+✓ IPv6: 160,923 Messungen
+✓ IPv4 DataFrame erweitert mit 22 Spalten
+✓ IPv6 DataFrame erweitert mit 22 Spalten
+
+📊 LATENZ- UND PFAD-METRIKEN EXTRAHIEREN:
+--------------------------------------------------
+Verarbeite IPv4 Messungen...
+  Verarbeitet: 50,000 Messungen...
+  Verarbeitet: 100,000 Messungen...
+  Verarbeitet: 150,000 Messungen...
+✓ IPv4: 160,923 valide Messungen (100.0%)
+Verarbeite IPv6 Messungen...
+  Verarbeitet: 50,000 Messungen...
+  Verarbeitet: 100,000 Messungen...
+  Verarbeitet: 150,000 Messungen...
+✓ IPv6: 160,923 valide Messungen (100.0%)
+
+2. KORRIGIERTE TRACEROUTE-PFAD-ANALYSE - IPv4
+------------------------------------------------------------
+
+🛣️ KORRIGIERTE ROUTING-PFAD-DIVERSITÄT:
+
+📡 ANYCAST SERVICES:
+  Quad9 DNS:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 2.2
+    ASN-Konsistenz (Jaccard): 0.619
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 6.0 (±1.5)
+    Hop-Count Baseline-Konformität: 98.8% (erwartet: 2-8)
+  Google DNS:
+    Eindeutige ASNs gesamt: 2
+    Durchschn. ASNs pro Region: 1.8
+    ASN-Konsistenz (Jaccard): 0.822
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 5.5 (±0.8)
+    Hop-Count Baseline-Konformität: 99.4% (erwartet: 2-8)
+  Cloudflare DNS:
+    Eindeutige ASNs gesamt: 8
+    Durchschn. ASNs pro Region: 2.7
+    ASN-Konsistenz (Jaccard): 0.544
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 7.2 (±0.7)
+    Hop-Count Baseline-Konformität: 90.5% (erwartet: 2-8)
+  Cloudflare CDN:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 2.5
+    ASN-Konsistenz (Jaccard): 0.737
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 7.4 (±0.8)
+    Hop-Count Baseline-Konformität: 99.9% (erwartet: 2-10)
+
+📡 PSEUDO-ANYCAST SERVICES:
+  Akamai CDN:
+    Eindeutige ASNs gesamt: 4
+    Durchschn. ASNs pro Region: 2.9
+    ASN-Konsistenz (Jaccard): 0.835
+    📊 Konsistenz = 0.835 (zwischen Anycast/Unicast)
+    Durchschn. valide Hops: 14.6 (±2.5)
+    Hop-Count Baseline-Konformität: 99.7% (erwartet: 8-20)
+
+📡 UNICAST SERVICES:
+  Heise:
+    Eindeutige ASNs gesamt: 6
+    Durchschn. ASNs pro Region: 3.5
+    ASN-Konsistenz (Jaccard): 0.570
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 12.4 (±2.3)
+    Hop-Count Baseline-Konformität: 100.0% (erwartet: 8-25)
+  Berkeley NTP:
+    Eindeutige ASNs gesamt: 10
+    Durchschn. ASNs pro Region: 5.1
+    ASN-Konsistenz (Jaccard): 0.600
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 17.9 (±3.1)
+    Hop-Count Baseline-Konformität: 100.0% (erwartet: 10-30)
+
+2. KORRIGIERTE TRACEROUTE-PFAD-ANALYSE - IPv6
+------------------------------------------------------------
+
+🛣️ KORRIGIERTE ROUTING-PFAD-DIVERSITÄT:
+
+📡 ANYCAST SERVICES:
+  Quad9 DNS:
+    Eindeutige ASNs gesamt: 6
+    Durchschn. ASNs pro Region: 3.0
+    ASN-Konsistenz (Jaccard): 0.735
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 7.8 (±1.3)
+    Hop-Count Baseline-Konformität: 96.2% (erwartet: 3-10)
+  Google DNS:
+    Eindeutige ASNs gesamt: 4
+    Durchschn. ASNs pro Region: 2.3
+    ASN-Konsistenz (Jaccard): 0.846
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 6.1 (±1.9)
+    Hop-Count Baseline-Konformität: 99.1% (erwartet: 3-10)
+  Cloudflare DNS:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 2.5
+    ASN-Konsistenz (Jaccard): 0.746
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 8.6 (±1.1)
+    Hop-Count Baseline-Konformität: 95.8% (erwartet: 3-10)
+  Cloudflare CDN:
+    Eindeutige ASNs gesamt: 6
+    Durchschn. ASNs pro Region: 2.6
+    ASN-Konsistenz (Jaccard): 0.695
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 7.6 (±1.0)
+    Hop-Count Baseline-Konformität: 100.0% (erwartet: 3-12)
+
+📡 PSEUDO-ANYCAST SERVICES:
+  Akamai CDN:
+    Eindeutige ASNs gesamt: 6
+    Durchschn. ASNs pro Region: 2.8
+    ASN-Konsistenz (Jaccard): 0.690
+    📊 Konsistenz = 0.690 (zwischen Anycast/Unicast)
+    Durchschn. valide Hops: 15.1 (±2.4)
+    Hop-Count Baseline-Konformität: 99.1% (erwartet: 8-25)
+
+📡 UNICAST SERVICES:
+  Berkeley NTP:
+    Eindeutige ASNs gesamt: 5
+    Durchschn. ASNs pro Region: 4.4
+    ASN-Konsistenz (Jaccard): 0.813
+    ✅ Hohe Konsistenz = erwartete Unicast-Stabilität
+    Durchschn. valide Hops: 16.7 (±2.1)
+    Hop-Count Baseline-Konformität: 100.0% (erwartet: 10-35)
+  Heise:
+    Eindeutige ASNs gesamt: 7
+    Durchschn. ASNs pro Region: 4.1
+    ASN-Konsistenz (Jaccard): 0.654
+    ⚠️ Unerwartete Konsistenz für Service-Typ
+    Durchschn. valide Hops: 11.4 (±2.2)
+    Hop-Count Baseline-Konformität: 96.0% (erwartet: 8-30)
+
+4. WISSENSCHAFTLICHE GEOGRAFISCHE EFFIZIENZ-ANALYSE - IPv4
+----------------------------------------------------------------------
+
+🌍 GEOGRAFISCHE EFFIZIENZ-KOMPONENTEN:
+
+📊 ANYCAST:
+  Latenz-Distanz-Effizienz: 0.689
+  Regionale Konsistenz: 0.537
+  Coverage-Score: 1.000 (10/10 Regionen)
+  Baseline-Performance: 0.025
+  🎯 Kombinierter Geo-Effizienz-Score: 58.1/100
+  🟠 Moderate geografische Optimierung
+
+📊 PSEUDO-ANYCAST:
+  Latenz-Distanz-Effizienz: 0.335
+  Regionale Konsistenz: 0.648
+  Coverage-Score: 0.800 (8/10 Regionen)
+  Baseline-Performance: 0.290
+  🎯 Kombinierter Geo-Effizienz-Score: 49.7/100
+  🟠 Moderate geografische Optimierung
+
+📊 UNICAST:
+  Latenz-Distanz-Effizienz: 0.116
+  Regionale Konsistenz: 0.716
+  Coverage-Score: 0.800 (8/10 Regionen)
+  Baseline-Performance: 0.698
+  🎯 Kombinierter Geo-Effizienz-Score: 51.9/100
+  🟠 Moderate geografische Optimierung
+
+4. WISSENSCHAFTLICHE GEOGRAFISCHE EFFIZIENZ-ANALYSE - IPv6
+----------------------------------------------------------------------
+
+🌍 GEOGRAFISCHE EFFIZIENZ-KOMPONENTEN:
+
+📊 ANYCAST:
+  Latenz-Distanz-Effizienz: 0.509
+  Regionale Konsistenz: 0.587
+  Coverage-Score: 1.000 (10/10 Regionen)
+  Baseline-Performance: 0.026
+  🎯 Kombinierter Geo-Effizienz-Score: 53.0/100
+  🟠 Moderate geografische Optimierung
+
+📊 PSEUDO-ANYCAST:
+  Latenz-Distanz-Effizienz: 0.372
+  Regionale Konsistenz: 0.641
+  Coverage-Score: 0.800 (8/10 Regionen)
+  Baseline-Performance: 0.291
+  🎯 Kombinierter Geo-Effizienz-Score: 50.8/100
+  🟠 Moderate geografische Optimierung
+
+📊 UNICAST:
+  Latenz-Distanz-Effizienz: 0.120
+  Regionale Konsistenz: 0.719
+  Coverage-Score: 0.800 (8/10 Regionen)
+  Baseline-Performance: 0.701
+  🎯 Kombinierter Geo-Effizienz-Score: 52.2/100
+  🟠 Moderate geografische Optimierung
+
+5. UMFASSENDE STATISTISCHE VALIDIERUNG
+--------------------------------------------------
+
+📊 PROTOKOLL-VERGLEICHE (IPv4 vs IPv6):
+
+  ANYCAST:
+    IPv4: μ=2.46ms, σ=4.86ms (n=91,956)
+    IPv6: μ=3.03ms, σ=7.18ms (n=91,956)
+    Mann-Whitney U p-value: 0.00e+00
+    Effect Size (Cohen's d): -0.093
+    95% CI Differenz: [-1.08, -0.03]ms
+    Signifikanz: ***Hoch signifikant
+    Effect Size: Negligible
+
+  PSEUDO-ANYCAST:
+    IPv4: μ=145.46ms, σ=75.35ms (n=22,989)
+    IPv6: μ=144.55ms, σ=77.06ms (n=22,989)
+    Mann-Whitney U p-value: 7.99e-01
+    Effect Size (Cohen's d): 0.012
+    95% CI Differenz: [-5.16, 7.54]ms
+    Signifikanz: Nicht signifikant
+    Effect Size: Negligible
+
+  UNICAST:
+    IPv4: μ=153.46ms, σ=86.31ms (n=45,978)
+    IPv6: μ=148.75ms, σ=80.56ms (n=45,978)
+    Mann-Whitney U p-value: 1.12e-37
+    Effect Size (Cohen's d): 0.056
+    95% CI Differenz: [-2.63, 11.64]ms
+    Signifikanz: ***Hoch signifikant
+    Effect Size: Negligible
+
+🏢 PROVIDER-VERGLEICHE (mit Bonferroni-Korrektur):
+
+  IPv4:
+    Kruskal-Wallis H: 259.202, p-value: 5.19e-57
+    Bonferroni-korrigiertes α: 0.0167
+    Signifikante Unterschiede (Bonferroni-korrigiert):
+      Quad9 (2.70ms) vs Google (3.65ms): p=6.88e-19
+      Quad9 (2.70ms) vs Cloudflare (1.74ms): p=7.61e-68
+      Google (3.65ms) vs Cloudflare (1.74ms): p=4.13e-08
+
+  IPv6:
+    Kruskal-Wallis H: 3053.282, p-value: 0.00e+00
+    Bonferroni-korrigiertes α: 0.0167
+    Signifikante Unterschiede (Bonferroni-korrigiert):
+      Quad9 (2.97ms) vs Cloudflare (1.79ms): p=0.00e+00
+      Google (5.57ms) vs Cloudflare (1.79ms): p=0.00e+00
+
+🌍 REGIONALE ANALYSEN:
+
+  IPv4 Regionale Unterschiede:
+    Kruskal-Wallis H: 60471.014, p-value: 0.00e+00
+    Performance-Ausreißer-Regionen:
+      eu-north-1: 3.27ms (vs. global 1.36ms)
+
+  IPv6 Regionale Unterschiede:
+    Kruskal-Wallis H: 48556.989, p-value: 0.00e+00
+    Performance-Ausreißer-Regionen:
+      eu-north-1: 4.48ms (vs. global 1.49ms)
+
+6. ERWEITERTE VISUALISIERUNGEN (15 CHARTS)
+--------------------------------------------------

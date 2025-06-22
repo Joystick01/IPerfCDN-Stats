@@ -1,0 +1,217 @@
+=== PHASE 1: DATENVERSTÄNDNIS & ÜBERBLICK (METHODISCH VERBESSERT) ===
+Autor: MTR Anycast Routing Analyse - Korrigierte Methodik
+Datum: 2025-06-22 12:55:54
+================================================================================
+
+📋 SERVICE-KLASSIFIKATION DEFINIERT:
+--------------------------------------------------
+  ANYCAST: 1.1.1.1 (Cloudflare DNS)
+  ANYCAST: 8.8.8.8 (Google DNS)
+  ANYCAST: 9.9.9.9 (Quad9 DNS)
+  ANYCAST: 104.16.123.96 (Cloudflare CDN)
+  PSEUDO-ANYCAST: 2.16.241.219 (Akamai CDN)
+  UNICAST: 193.99.144.85 (Heise)
+  UNICAST: 169.229.128.134 (Berkeley NTP)
+  ANYCAST: 2606:4700:4700::1111 (Cloudflare DNS)
+  ANYCAST: 2001:4860:4860::8888 (Google DNS)
+  ANYCAST: 2620:fe::fe:9 (Quad9 DNS)
+  ANYCAST: 2606:4700::6810:7b60 (Cloudflare CDN)
+  PSEUDO-ANYCAST: 2a02:26f0:3500:1b::1724:a393 (Akamai CDN)
+  UNICAST: 2a02:2e0:3fe:1001:7777:772e:2:85 (Heise)
+  UNICAST: 2607:f140:ffff:8000:0:8006:0:a (Berkeley NTP)
+
+1. DATEN LADEN...
+------------------------------
+✓ IPv4 Daten geladen: 160,923 Zeilen, 10 Spalten
+✓ IPv6 Daten geladen: 160,923 Zeilen, 10 Spalten
+
+2. ERWEITERTE DATENSTRUKTUR-ANALYSE - IPv4
+-------------------------------------------------------
+Spalten:
+  - id: object
+  - utctime: datetime64[ns]
+  - bitpattern: object
+  - src: object
+  - psize: int32
+  - dst: object
+  - tos: int32
+  - tests: int32
+  - region: object
+  - hubs: object
+
+Speicherverbrauch: 74.89 MB
+Zeitraum: 2025-05-27 12:59:06.053865 bis 2025-06-20 14:31:15.563100
+
+📊 SERVICE-TYP-VERTEILUNG:
+  ANYCAST: 91,956 Messungen (57.1%)
+  UNICAST: 45,978 Messungen (28.6%)
+  PSEUDO-ANYCAST: 22,989 Messungen (14.3%)
+
+🏢 PROVIDER-VERTEILUNG:
+  Cloudflare: 45,978 Messungen (28.6%)
+  Heise: 22,989 Messungen (14.3%)
+  Quad9: 22,989 Messungen (14.3%)
+  UC Berkeley: 22,989 Messungen (14.3%)
+  Google: 22,989 Messungen (14.3%)
+  Akamai: 22,989 Messungen (14.3%)
+
+🌍 REGIONALE BALANCE PRO SERVICE-TYP:
+  ANYCAST: CV = 0.001 (✅ Gut balanciert)
+  UNICAST: CV = 0.001 (✅ Gut balanciert)
+  PSEUDO-ANYCAST: CV = 0.001 (✅ Gut balanciert)
+
+2. ERWEITERTE DATENSTRUKTUR-ANALYSE - IPv6
+-------------------------------------------------------
+Spalten:
+  - id: object
+  - utctime: datetime64[ns]
+  - bitpattern: object
+  - src: object
+  - psize: int32
+  - dst: object
+  - tos: int32
+  - tests: int32
+  - region: object
+  - hubs: object
+
+Speicherverbrauch: 76.84 MB
+Zeitraum: 2025-05-27 12:59:06.053865 bis 2025-06-20 14:31:15.563100
+
+📊 SERVICE-TYP-VERTEILUNG:
+  ANYCAST: 91,956 Messungen (57.1%)
+  UNICAST: 45,978 Messungen (28.6%)
+  PSEUDO-ANYCAST: 22,989 Messungen (14.3%)
+
+🏢 PROVIDER-VERTEILUNG:
+  Cloudflare: 45,978 Messungen (28.6%)
+  Quad9: 22,989 Messungen (14.3%)
+  Google: 22,989 Messungen (14.3%)
+  UC Berkeley: 22,989 Messungen (14.3%)
+  Heise: 22,989 Messungen (14.3%)
+  Akamai: 22,989 Messungen (14.3%)
+
+🌍 REGIONALE BALANCE PRO SERVICE-TYP:
+  ANYCAST: CV = 0.001 (✅ Gut balanciert)
+  UNICAST: CV = 0.001 (✅ Gut balanciert)
+  PSEUDO-ANYCAST: CV = 0.001 (✅ Gut balanciert)
+
+3. UMFASSENDE DATENQUALITÄT - IPv4
+---------------------------------------------
+✅ Keine fehlenden Werte in Hauptspalten
+✅ Duplikate (ohne hubs): 0 (0.00%)
+📅 Zeitlücken-Analyse:
+  Große Zeitlücken (>30min): 4
+  Anteil der Messungen mit Lücken: 0.002%
+  ✅ Datenintegrität: Ausgezeichnet
+
+🌐 NETZWERK-REACHABILITY-VALIDIERUNG:
+  ✅ Alle Ziele von allen Regionen erreichbar
+
+📊 HOP-DATEN-QUALITÄT:
+  Berechne erweiterte Metriken...
+    Verarbeitet: 0 Messungen...
+    Verarbeitet: 50,000 Messungen...
+    Verarbeitet: 100,000 Messungen...
+    Verarbeitet: 150,000 Messungen...
+  Gültige Hop-Counts: 100.0%
+  Gültige Latenz-Messungen: 100.0%
+  Durchschnittliche Hops (bereinigt): 10.13
+
+3. UMFASSENDE DATENQUALITÄT - IPv6
+---------------------------------------------
+✅ Keine fehlenden Werte in Hauptspalten
+✅ Duplikate (ohne hubs): 0 (0.00%)
+📅 Zeitlücken-Analyse:
+  Große Zeitlücken (>30min): 4
+  Anteil der Messungen mit Lücken: 0.002%
+  ✅ Datenintegrität: Ausgezeichnet
+
+🌐 NETZWERK-REACHABILITY-VALIDIERUNG:
+  ✅ Alle Ziele von allen Regionen erreichbar
+
+📊 HOP-DATEN-QUALITÄT:
+  Berechne erweiterte Metriken...
+    Verarbeitet: 0 Messungen...
+    Verarbeitet: 50,000 Messungen...
+    Verarbeitet: 100,000 Messungen...
+    Verarbeitet: 150,000 Messungen...
+  Gültige Hop-Counts: 100.0%
+  Gültige Latenz-Messungen: 100.0%
+  Durchschnittliche Hops (bereinigt): 10.48
+
+4. SERVICE-SPEZIFISCHE ANALYSEN - IPv4
+--------------------------------------------------
+
+📊 ANYCAST SERVICES:
+  Durchschn. Latenz: 2.46ms (±4.86ms)
+  Median Latenz: 1.36ms
+  Durchschn. Hops: 6.53
+  Durchschn. Packet Loss: 13.27%
+  Latenz-Outliers: 8,970 (9.75%)
+  Baseline-Konformität: 94.9% (erwartet: 0-10ms)
+  ✅ Performance entspricht Erwartungen
+  📈 Provider-Performance:
+    Quad9: 2.70ms (22,989 Messungen)
+    Google: 3.65ms (22,989 Messungen)
+    Cloudflare: 1.74ms (45,978 Messungen)
+
+📊 PSEUDO-ANYCAST SERVICES:
+  Durchschn. Latenz: 145.46ms (±75.35ms)
+  Median Latenz: 161.01ms
+  Durchschn. Hops: 14.55
+  Durchschn. Packet Loss: 21.61%
+  Latenz-Outliers: 4,601 (20.01%)
+  Baseline-Konformität: 59.6% (erwartet: 50-200ms)
+  🚨 Performance stark abweichend von Baseline
+
+📊 UNICAST SERVICES:
+  Durchschn. Latenz: 153.46ms (±86.31ms)
+  Median Latenz: 156.10ms
+  Durchschn. Hops: 15.12
+  Durchschn. Packet Loss: 11.22%
+  Latenz-Outliers: 89 (0.19%)
+  Baseline-Konformität: 79.7% (erwartet: 50-300ms)
+  ⚠️ Performance teilweise abweichend
+  📈 Provider-Performance:
+    Heise: 147.71ms (22,989 Messungen)
+    UC Berkeley: 159.20ms (22,989 Messungen)
+
+4. SERVICE-SPEZIFISCHE ANALYSEN - IPv6
+--------------------------------------------------
+
+📊 ANYCAST SERVICES:
+  Durchschn. Latenz: 3.03ms (±7.18ms)
+  Median Latenz: 1.49ms
+  Durchschn. Hops: 7.53
+  Durchschn. Packet Loss: 15.88%
+  Latenz-Outliers: 11,088 (12.06%)
+  Baseline-Konformität: 94.4% (erwartet: 0-10ms)
+  ✅ Performance entspricht Erwartungen
+  📈 Provider-Performance:
+    Quad9: 2.97ms (22,989 Messungen)
+    Google: 5.57ms (22,989 Messungen)
+    Cloudflare: 1.79ms (45,978 Messungen)
+
+📊 PSEUDO-ANYCAST SERVICES:
+  Durchschn. Latenz: 144.55ms (±77.06ms)
+  Median Latenz: 161.23ms
+  Durchschn. Hops: 15.14
+  Durchschn. Packet Loss: 8.56%
+  Latenz-Outliers: 1 (0.00%)
+  Baseline-Konformität: 59.9% (erwartet: 50-200ms)
+  🚨 Performance stark abweichend von Baseline
+
+📊 UNICAST SERVICES:
+  Durchschn. Latenz: 148.75ms (±80.56ms)
+  Median Latenz: 150.97ms
+  Durchschn. Hops: 14.05
+  Durchschn. Packet Loss: 20.21%
+  Latenz-Outliers: 78 (0.17%)
+  Baseline-Konformität: 84.6% (erwartet: 50-300ms)
+  ✅ Performance entspricht Erwartungen
+  📈 Provider-Performance:
+    UC Berkeley: 150.02ms (22,989 Messungen)
+    Heise: 147.49ms (22,989 Messungen)
+
+5. ERWEITERTE VISUALISIERUNGEN - IPv4
+---------------------------------------------

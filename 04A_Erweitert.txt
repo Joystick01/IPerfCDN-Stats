@@ -1,0 +1,772 @@
+✅ Plotly verfügbar - interaktive Visualisierungen aktiviert
+=== PHASE 4: UMFASSENDE ERWEITERTE ANALYSEN (METHODISCH VERBESSERT) ===
+Netzwerk-Topologie, Infrastruktur-Mapping, Qualitätsanalysen & Akamai-Deep-Dive
+FOKUS: Deskriptive/Explanatorische Analysen (KEINE Vorhersagen)
+====================================================================================================
+
+📋 ERWEITERTE SERVICE- UND REGIONS-KLASSIFIKATION:
+------------------------------------------------------------
+Service-Typen: Anycast (echte), Pseudo-Anycast (Akamai), Unicast (Referenz)
+Provider-Tiers: Hyperscaler, DNS-Specialist, CDN-Specialist, Content, Academic
+Infrastruktur-Tiers: Tier1 (NA/EU/Asia), Tier2 (Emerging), Tier3 (Underserved)
+
+1. DATEN LADEN UND KONSISTENTE AUFBEREITUNG...
+-------------------------------------------------------
+✓ IPv4: 160,923 Messungen
+✓ IPv6: 160,923 Messungen
+
+📊 ERWEITERTE DATENAUFBEREITUNG - IPv4
+--------------------------------------------------
+Extrahiere umfassende Metriken...
+  Verarbeitet: 50,000 Messungen...
+  Verarbeitet: 100,000 Messungen...
+  Verarbeitet: 150,000 Messungen...
+✓ Erweiterte Daten erstellt: 160,923 Performance-Punkte
+  Validierungs-Rate: 100.0%
+  Service-Typen: 3
+  Provider: 6
+  Regionen: 10
+
+📊 ERWEITERTE DATENAUFBEREITUNG - IPv6
+--------------------------------------------------
+Extrahiere umfassende Metriken...
+  Verarbeitet: 50,000 Messungen...
+  Verarbeitet: 100,000 Messungen...
+  Verarbeitet: 150,000 Messungen...
+✓ Erweiterte Daten erstellt: 160,923 Performance-Punkte
+  Validierungs-Rate: 100.0%
+  Service-Typen: 3
+  Provider: 6
+  Regionen: 10
+
+2. NETZWERK-TOPOLOGIE & INFRASTRUKTUR-ANALYSE - IPv4
+----------------------------------------------------------------------
+
+🌐 ASN-DIVERSITÄT PRO SERVICE-TYP:
+
+  ANYCAST:
+    Quad9:
+      Eindeutige ASNs gesamt: 5
+      Durchschn. ASNs pro Pfad: 1.7
+      ASN-Konsistenz zwischen Regionen: 0.528
+      Tier-1-Provider-Penetration: 0.0%
+      Hyperscaler-Penetration: 47.2%
+      ⚠️ Hohe Konsistenz (unerwartete Anycast-Homogenität)
+    Google:
+      Eindeutige ASNs gesamt: 2
+      Durchschn. ASNs pro Pfad: 1.6
+      ASN-Konsistenz zwischen Regionen: 0.714
+      Tier-1-Provider-Penetration: 0.0%
+      Hyperscaler-Penetration: 100.0%
+      ⚠️ Hohe Konsistenz (unerwartete Anycast-Homogenität)
+    Cloudflare:
+      Eindeutige ASNs gesamt: 8
+      Durchschn. ASNs pro Pfad: 1.8
+      ASN-Konsistenz zwischen Regionen: 0.814
+      Tier-1-Provider-Penetration: 0.1%
+      Hyperscaler-Penetration: 100.0%
+      ⚠️ Hohe Konsistenz (unerwartete Anycast-Homogenität)
+
+  PSEUDO-ANYCAST:
+    Akamai:
+      Eindeutige ASNs gesamt: 4
+      Durchschn. ASNs pro Pfad: 1.7
+      ASN-Konsistenz zwischen Regionen: 0.810
+      Tier-1-Provider-Penetration: 2.0%
+      Hyperscaler-Penetration: 71.3%
+      📊 Moderate Konsistenz (zwischen Anycast/Unicast)
+
+  UNICAST:
+    Heise:
+      Eindeutige ASNs gesamt: 6
+      Durchschn. ASNs pro Pfad: 2.1
+      ASN-Konsistenz zwischen Regionen: 0.593
+      Tier-1-Provider-Penetration: 8.9%
+      Hyperscaler-Penetration: 42.7%
+      ⚠️ Niedrige Konsistenz (unerwartete Unicast-Variabilität)
+    UC Berkeley:
+      Eindeutige ASNs gesamt: 10
+      Durchschn. ASNs pro Pfad: 3.6
+      ASN-Konsistenz zwischen Regionen: 0.738
+      Tier-1-Provider-Penetration: 70.0%
+      Hyperscaler-Penetration: 35.4%
+      ✅ Hohe Konsistenz (erwartete Unicast-Stabilität)
+
+🗺️ GEOGRAFISCHE PFAD-DIVERSITÄT:
+  ANYCAST:
+    Durchschn. geografische Hinweise pro Pfad: 0.7
+    Geografische Diversität-Verteilung:
+      af-south-1: 1.7 Hinweise/Pfad
+      eu-north-1: 1.4 Hinweise/Pfad
+      eu-central-1: 1.0 Hinweise/Pfad
+      ap-northeast-1: 0.9 Hinweise/Pfad
+      ca-central-1: 0.8 Hinweise/Pfad
+  PSEUDO-ANYCAST:
+    Durchschn. geografische Hinweise pro Pfad: 8.5
+    Geografische Diversität-Verteilung:
+      ap-northeast-1: 10.0 Hinweise/Pfad
+      ap-southeast-2: 10.0 Hinweise/Pfad
+      ap-east-1: 10.0 Hinweise/Pfad
+      ap-south-1: 9.6 Hinweise/Pfad
+      ca-central-1: 8.0 Hinweise/Pfad
+  UNICAST:
+    Durchschn. geografische Hinweise pro Pfad: 4.5
+    Geografische Diversität-Verteilung:
+      ap-northeast-1: 6.7 Hinweise/Pfad
+      eu-north-1: 5.5 Hinweise/Pfad
+      sa-east-1: 5.5 Hinweise/Pfad
+      eu-central-1: 5.0 Hinweise/Pfad
+      ap-south-1: 4.3 Hinweise/Pfad
+
+⚡ HOP-EFFIZIENZ-ANALYSE:
+  ANYCAST:
+    Latenz pro Hop: 0.41ms
+    Pfad-Effizienz: 0.878
+    Pfad-Completion-Rate: 0.878
+    Bewertung: 🟢 Sehr effizient
+  PSEUDO-ANYCAST:
+    Latenz pro Hop: 9.99ms
+    Pfad-Effizienz: 0.785
+    Pfad-Completion-Rate: 0.785
+    Bewertung: 🟢 Gut für Unicast/Pseudo-Anycast
+  UNICAST:
+    Latenz pro Hop: 10.06ms
+    Pfad-Effizienz: 0.905
+    Pfad-Completion-Rate: 0.905
+    Bewertung: 🟡 Moderate Effizienz
+
+🏗️ PROVIDER-INFRASTRUKTUR-QUALITÄT-MAPPING:
+  Heise:
+    Durchschn. Latenz: 147.71ms
+    Latenz-Konsistenz: 0.391
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.904
+    Netzwerk-Reichweite: 2.1 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.465/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  Quad9:
+    Durchschn. Latenz: 2.70ms
+    Latenz-Konsistenz: -0.517
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.935
+    Netzwerk-Reichweite: 1.7 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.498/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  UC Berkeley:
+    Durchschn. Latenz: 159.20ms
+    Latenz-Konsistenz: 0.484
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.906
+    Netzwerk-Reichweite: 3.6 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.504/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  Google:
+    Durchschn. Latenz: 3.65ms
+    Latenz-Konsistenz: -0.936
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.871
+    Netzwerk-Reichweite: 1.6 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.387/1.000
+    Bewertung: 🔴 Schwache Infrastruktur
+  Akamai:
+    Durchschn. Latenz: 145.46ms
+    Latenz-Konsistenz: 0.482
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.785
+    Netzwerk-Reichweite: 1.7 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.459/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  Cloudflare:
+    Durchschn. Latenz: 1.74ms
+    Latenz-Konsistenz: -1.043
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.852
+    Netzwerk-Reichweite: 1.8 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.401/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+
+2. NETZWERK-TOPOLOGIE & INFRASTRUKTUR-ANALYSE - IPv6
+----------------------------------------------------------------------
+
+🌐 ASN-DIVERSITÄT PRO SERVICE-TYP:
+
+  ANYCAST:
+    Quad9:
+      Eindeutige ASNs gesamt: 6
+      Durchschn. ASNs pro Pfad: 1.7
+      ASN-Konsistenz zwischen Regionen: 0.611
+      Tier-1-Provider-Penetration: 0.0%
+      Hyperscaler-Penetration: 50.0%
+      ⚠️ Hohe Konsistenz (unerwartete Anycast-Homogenität)
+    Google:
+      Eindeutige ASNs gesamt: 4
+      Durchschn. ASNs pro Pfad: 1.2
+      ASN-Konsistenz zwischen Regionen: 0.724
+      Tier-1-Provider-Penetration: 0.0%
+      Hyperscaler-Penetration: 100.0%
+      ⚠️ Hohe Konsistenz (unerwartete Anycast-Homogenität)
+    Cloudflare:
+      Eindeutige ASNs gesamt: 6
+      Durchschn. ASNs pro Pfad: 1.2
+      ASN-Konsistenz zwischen Regionen: 0.672
+      Tier-1-Provider-Penetration: 0.0%
+      Hyperscaler-Penetration: 100.0%
+      ⚠️ Hohe Konsistenz (unerwartete Anycast-Homogenität)
+
+  PSEUDO-ANYCAST:
+    Akamai:
+      Eindeutige ASNs gesamt: 6
+      Durchschn. ASNs pro Pfad: 1.3
+      ASN-Konsistenz zwischen Regionen: 0.672
+      Tier-1-Provider-Penetration: 0.3%
+      Hyperscaler-Penetration: 24.9%
+      📊 Moderate Konsistenz (zwischen Anycast/Unicast)
+
+  UNICAST:
+    UC Berkeley:
+      Eindeutige ASNs gesamt: 5
+      Durchschn. ASNs pro Pfad: 3.0
+      ASN-Konsistenz zwischen Regionen: 0.760
+      Tier-1-Provider-Penetration: 0.0%
+      Hyperscaler-Penetration: 55.8%
+      ✅ Hohe Konsistenz (erwartete Unicast-Stabilität)
+    Heise:
+      Eindeutige ASNs gesamt: 7
+      Durchschn. ASNs pro Pfad: 2.3
+      ASN-Konsistenz zwischen Regionen: 0.800
+      Tier-1-Provider-Penetration: 8.8%
+      Hyperscaler-Penetration: 60.0%
+      ✅ Hohe Konsistenz (erwartete Unicast-Stabilität)
+
+🗺️ GEOGRAFISCHE PFAD-DIVERSITÄT:
+  ANYCAST:
+    Durchschn. geografische Hinweise pro Pfad: 0.3
+    Geografische Diversität-Verteilung:
+      af-south-1: 1.7 Hinweise/Pfad
+      eu-north-1: 0.5 Hinweise/Pfad
+      ap-southeast-2: 0.3 Hinweise/Pfad
+      eu-central-1: 0.3 Hinweise/Pfad
+      ca-central-1: 0.3 Hinweise/Pfad
+  PSEUDO-ANYCAST:
+    Durchschn. geografische Hinweise pro Pfad: 5.8
+    Geografische Diversität-Verteilung:
+      ap-east-1: 6.7 Hinweise/Pfad
+      ap-southeast-2: 6.7 Hinweise/Pfad
+      ap-south-1: 6.0 Hinweise/Pfad
+      af-south-1: 6.0 Hinweise/Pfad
+      ca-central-1: 6.0 Hinweise/Pfad
+  UNICAST:
+    Durchschn. geografische Hinweise pro Pfad: 2.9
+    Geografische Diversität-Verteilung:
+      sa-east-1: 5.7 Hinweise/Pfad
+      ap-east-1: 3.4 Hinweise/Pfad
+      ap-northeast-1: 3.4 Hinweise/Pfad
+      ap-southeast-2: 3.1 Hinweise/Pfad
+      af-south-1: 2.5 Hinweise/Pfad
+
+⚡ HOP-EFFIZIENZ-ANALYSE:
+  ANYCAST:
+    Latenz pro Hop: 0.43ms
+    Pfad-Effizienz: 0.853
+    Pfad-Completion-Rate: 0.853
+    Bewertung: 🟢 Sehr effizient
+  PSEUDO-ANYCAST:
+    Latenz pro Hop: 9.45ms
+    Pfad-Effizienz: 0.916
+    Pfad-Completion-Rate: 0.916
+    Bewertung: 🟢 Gut für Unicast/Pseudo-Anycast
+  UNICAST:
+    Latenz pro Hop: 10.62ms
+    Pfad-Effizienz: 0.816
+    Pfad-Completion-Rate: 0.816
+    Bewertung: 🟡 Moderate Effizienz
+
+🏗️ PROVIDER-INFRASTRUKTUR-QUALITÄT-MAPPING:
+  Quad9:
+    Durchschn. Latenz: 2.97ms
+    Latenz-Konsistenz: -0.245
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.850
+    Netzwerk-Reichweite: 1.7 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.536/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  Google:
+    Durchschn. Latenz: 5.57ms
+    Latenz-Konsistenz: -1.157
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.832
+    Netzwerk-Reichweite: 1.2 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.304/1.000
+    Bewertung: 🔴 Schwache Infrastruktur
+  Cloudflare:
+    Durchschn. Latenz: 1.79ms
+    Latenz-Konsistenz: -1.456
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.864
+    Netzwerk-Reichweite: 1.2 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.311/1.000
+    Bewertung: 🔴 Schwache Infrastruktur
+  UC Berkeley:
+    Durchschn. Latenz: 150.02ms
+    Latenz-Konsistenz: 0.513
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.791
+    Netzwerk-Reichweite: 3.0 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.485/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  Heise:
+    Durchschn. Latenz: 147.49ms
+    Latenz-Konsistenz: 0.408
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.841
+    Netzwerk-Reichweite: 2.3 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.461/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  Akamai:
+    Durchschn. Latenz: 144.55ms
+    Latenz-Konsistenz: 0.467
+    Globale Abdeckung: 10/10 Regionen
+    Pfad-Qualität: 0.916
+    Netzwerk-Reichweite: 1.3 ASNs/Pfad
+    🏆 Infrastruktur-Score: 0.469/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+
+3. QUALITÄTS-ANALYSEN & SLA-BEWERTUNG - IPv4
+-------------------------------------------------------
+
+📋 SLA-KONFORMITÄTS-ANALYSE:
+
+  ANYCAST SLA-TARGETS:
+    Latenz-Target: ≤10.0ms
+    Availability-Target: ≥99.9%
+    Packet-Loss-Target: ≤0.1%
+
+    Quad9 SLA-Performance:
+      Latenz-SLA-Konformität: 90.0%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.5%
+      🎯 Kombinierter SLA-Score: 94.9/100
+      Bewertung: 🟢 Gute SLA-Erfüllung
+
+    Google SLA-Performance:
+      Latenz-SLA-Konformität: 90.0%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 100.0%
+      🎯 Kombinierter SLA-Score: 95.0/100
+      Bewertung: 🟢 Gute SLA-Erfüllung
+
+    Cloudflare SLA-Performance:
+      Latenz-SLA-Konformität: 99.8%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 100.0%
+      🎯 Kombinierter SLA-Score: 99.9/100
+      Bewertung: 🟢 Exzellente SLA-Erfüllung
+
+  PSEUDO-ANYCAST SLA-TARGETS:
+    Latenz-Target: ≤200.0ms
+    Availability-Target: ≥99.0%
+    Packet-Loss-Target: ≤0.5%
+
+    Akamai SLA-Performance:
+      Latenz-SLA-Konformität: 79.6%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.9%
+      🎯 Kombinierter SLA-Score: 89.8/100
+      Bewertung: 🟢 Gute SLA-Erfüllung
+
+  UNICAST SLA-TARGETS:
+    Latenz-Target: ≤300.0ms
+    Availability-Target: ≥98.0%
+    Packet-Loss-Target: ≤1.0%
+
+    Heise SLA-Performance:
+      Latenz-SLA-Konformität: 99.2%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.7%
+      🎯 Kombinierter SLA-Score: 99.6/100
+      Bewertung: 🟢 Exzellente SLA-Erfüllung
+
+    UC Berkeley SLA-Performance:
+      Latenz-SLA-Konformität: 90.2%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.6%
+      🎯 Kombinierter SLA-Score: 95.0/100
+      Bewertung: 🟢 Exzellente SLA-Erfüllung
+
+🌍 REGIONALE QUALITÄTS-DISPARITÄTEN:
+  ca-central-1 (TIER1):
+    Durchschn. Latenz: 42.38ms
+    P95-Latenz: 125.10ms
+    Durchschn. Packet Loss: 0.13%
+    Pfad-Completion-Rate: 0.768
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.624/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  eu-north-1 (TIER1):
+    Durchschn. Latenz: 32.86ms
+    P95-Latenz: 169.49ms
+    Durchschn. Packet Loss: 0.01%
+    Pfad-Completion-Rate: 0.946
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.647/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  ap-south-1 (TIER2):
+    Durchschn. Latenz: 80.16ms
+    P95-Latenz: 261.24ms
+    Durchschn. Packet Loss: 0.03%
+    Pfad-Completion-Rate: 0.771
+    Tier-1-Coverage: moderate
+    🏆 Regional-Qualitäts-Score: 0.513/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  eu-central-1 (TIER1):
+    Durchschn. Latenz: 23.31ms
+    P95-Latenz: 154.71ms
+    Durchschn. Packet Loss: 0.02%
+    Pfad-Completion-Rate: 0.953
+    Tier-1-Coverage: excellent
+    🏆 Regional-Qualitäts-Score: 0.685/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  ap-northeast-1 (TIER1):
+    Durchschn. Latenz: 82.78ms
+    P95-Latenz: 230.94ms
+    Durchschn. Packet Loss: 0.08%
+    Pfad-Completion-Rate: 0.959
+    Tier-1-Coverage: excellent
+    🏆 Regional-Qualitäts-Score: 0.535/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  ap-southeast-2 (TIER1):
+    Durchschn. Latenz: 98.10ms
+    P95-Latenz: 280.87ms
+    Durchschn. Packet Loss: 0.29%
+    Pfad-Completion-Rate: 0.795
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.487/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  af-south-1 (TIER3):
+    Durchschn. Latenz: 93.02ms
+    P95-Latenz: 316.08ms
+    Durchschn. Packet Loss: 0.02%
+    Pfad-Completion-Rate: 0.765
+    Tier-1-Coverage: poor
+    🏆 Regional-Qualitäts-Score: 0.488/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  sa-east-1 (TIER2):
+    Durchschn. Latenz: 82.50ms
+    P95-Latenz: 201.47ms
+    Durchschn. Packet Loss: 0.06%
+    Pfad-Completion-Rate: 0.920
+    Tier-1-Coverage: moderate
+    🏆 Regional-Qualitäts-Score: 0.541/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  us-west-1 (TIER1):
+    Durchschn. Latenz: 45.07ms
+    P95-Latenz: 159.70ms
+    Durchschn. Packet Loss: 0.01%
+    Pfad-Completion-Rate: 0.955
+    Tier-1-Coverage: excellent
+    🏆 Regional-Qualitäts-Score: 0.621/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  ap-east-1 (TIER1):
+    Durchschn. Latenz: 80.18ms
+    P95-Latenz: 197.81ms
+    Durchschn. Packet Loss: 0.07%
+    Pfad-Completion-Rate: 0.891
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.542/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+
+📊 SERVICE-TYP-ÜBERGREIFENDE QUALITÄTS-BENCHMARKS:
+
+  ANYCAST QUALITÄTS-BENCHMARKS:
+    Median-Latenz: 1.36ms
+    P95-Latenz: 13.40ms
+    P99-Latenz: 26.66ms
+    Jitter (Std.Dev.): 4.86ms
+    Reliability (Loss<1%): 99.9%
+    Konsistenz: -0.978
+    Qualitäts-Klasse: 🥈 Business-Klasse
+
+  PSEUDO-ANYCAST QUALITÄTS-BENCHMARKS:
+    Median-Latenz: 161.01ms
+    P95-Latenz: 248.84ms
+    P99-Latenz: 254.84ms
+    Jitter (Std.Dev.): 75.35ms
+    Reliability (Loss<1%): 99.9%
+    Konsistenz: 0.482
+    Qualitäts-Klasse: 🥈 Business-Klasse
+
+  UNICAST QUALITÄTS-BENCHMARKS:
+    Median-Latenz: 156.10ms
+    P95-Latenz: 305.52ms
+    P99-Latenz: 319.58ms
+    Jitter (Std.Dev.): 86.31ms
+    Reliability (Loss<1%): 99.7%
+    Konsistenz: 0.438
+    Qualitäts-Klasse: 🥉 Standard-Klasse
+
+3. QUALITÄTS-ANALYSEN & SLA-BEWERTUNG - IPv6
+-------------------------------------------------------
+
+📋 SLA-KONFORMITÄTS-ANALYSE:
+
+  ANYCAST SLA-TARGETS:
+    Latenz-Target: ≤10.0ms
+    Availability-Target: ≥99.9%
+    Packet-Loss-Target: ≤0.1%
+
+    Quad9 SLA-Performance:
+      Latenz-SLA-Konformität: 90.0%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 100.0%
+      🎯 Kombinierter SLA-Score: 95.0/100
+      Bewertung: 🟢 Gute SLA-Erfüllung
+
+    Google SLA-Performance:
+      Latenz-SLA-Konformität: 87.6%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.9%
+      🎯 Kombinierter SLA-Score: 93.8/100
+      Bewertung: 🟢 Gute SLA-Erfüllung
+
+    Cloudflare SLA-Performance:
+      Latenz-SLA-Konformität: 99.9%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.9%
+      🎯 Kombinierter SLA-Score: 99.9/100
+      Bewertung: 🟢 Exzellente SLA-Erfüllung
+
+  PSEUDO-ANYCAST SLA-TARGETS:
+    Latenz-Target: ≤200.0ms
+    Availability-Target: ≥99.0%
+    Packet-Loss-Target: ≤0.5%
+
+    Akamai SLA-Performance:
+      Latenz-SLA-Konformität: 79.9%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 100.0%
+      🎯 Kombinierter SLA-Score: 89.9/100
+      Bewertung: 🟢 Gute SLA-Erfüllung
+
+  UNICAST SLA-TARGETS:
+    Latenz-Target: ≤300.0ms
+    Availability-Target: ≥98.0%
+    Packet-Loss-Target: ≤1.0%
+
+    UC Berkeley SLA-Performance:
+      Latenz-SLA-Konformität: 100.0%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.6%
+      🎯 Kombinierter SLA-Score: 99.9/100
+      Bewertung: 🟢 Exzellente SLA-Erfüllung
+
+    Heise SLA-Performance:
+      Latenz-SLA-Konformität: 99.3%
+      Availability: 100.00%
+      Packet-Loss-SLA-Konformität: 99.8%
+      🎯 Kombinierter SLA-Score: 99.6/100
+      Bewertung: 🟢 Exzellente SLA-Erfüllung
+
+🌍 REGIONALE QUALITÄTS-DISPARITÄTEN:
+  ap-east-1 (TIER1):
+    Durchschn. Latenz: 79.63ms
+    P95-Latenz: 198.59ms
+    Durchschn. Packet Loss: 0.05%
+    Pfad-Completion-Rate: 0.880
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.542/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  af-south-1 (TIER3):
+    Durchschn. Latenz: 86.34ms
+    P95-Latenz: 268.33ms
+    Durchschn. Packet Loss: 0.03%
+    Pfad-Completion-Rate: 0.734
+    Tier-1-Coverage: poor
+    🏆 Regional-Qualitäts-Score: 0.501/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  sa-east-1 (TIER2):
+    Durchschn. Latenz: 82.31ms
+    P95-Latenz: 201.75ms
+    Durchschn. Packet Loss: 0.10%
+    Pfad-Completion-Rate: 0.949
+    Tier-1-Coverage: moderate
+    🏆 Regional-Qualitäts-Score: 0.543/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  ap-southeast-2 (TIER1):
+    Durchschn. Latenz: 97.88ms
+    P95-Latenz: 281.00ms
+    Durchschn. Packet Loss: 0.01%
+    Pfad-Completion-Rate: 0.778
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.491/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  eu-central-1 (TIER1):
+    Durchschn. Latenz: 22.13ms
+    P95-Latenz: 147.08ms
+    Durchschn. Packet Loss: 0.05%
+    Pfad-Completion-Rate: 0.888
+    Tier-1-Coverage: excellent
+    🏆 Regional-Qualitäts-Score: 0.686/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  ap-south-1 (TIER2):
+    Durchschn. Latenz: 81.64ms
+    P95-Latenz: 252.30ms
+    Durchschn. Packet Loss: 0.03%
+    Pfad-Completion-Rate: 0.733
+    Tier-1-Coverage: moderate
+    🏆 Regional-Qualitäts-Score: 0.510/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  eu-north-1 (TIER1):
+    Durchschn. Latenz: 30.87ms
+    P95-Latenz: 156.48ms
+    Durchschn. Packet Loss: 0.03%
+    Pfad-Completion-Rate: 0.928
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.657/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  us-west-1 (TIER1):
+    Durchschn. Latenz: 45.31ms
+    P95-Latenz: 159.82ms
+    Durchschn. Packet Loss: 0.02%
+    Pfad-Completion-Rate: 0.967
+    Tier-1-Coverage: excellent
+    🏆 Regional-Qualitäts-Score: 0.622/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+  ap-northeast-1 (TIER1):
+    Durchschn. Latenz: 82.63ms
+    P95-Latenz: 231.95ms
+    Durchschn. Packet Loss: 0.03%
+    Pfad-Completion-Rate: 0.936
+    Tier-1-Coverage: excellent
+    🏆 Regional-Qualitäts-Score: 0.534/1.000
+    Bewertung: 🟡 Moderate Infrastruktur
+  ca-central-1 (TIER1):
+    Durchschn. Latenz: 40.15ms
+    P95-Latenz: 99.98ms
+    Durchschn. Packet Loss: 0.04%
+    Pfad-Completion-Rate: 0.719
+    Tier-1-Coverage: good
+    🏆 Regional-Qualitäts-Score: 0.643/1.000
+    Bewertung: 🟢 Gute Infrastruktur
+
+📊 SERVICE-TYP-ÜBERGREIFENDE QUALITÄTS-BENCHMARKS:
+
+  ANYCAST QUALITÄTS-BENCHMARKS:
+    Median-Latenz: 1.49ms
+    P95-Latenz: 13.54ms
+    P99-Latenz: 29.48ms
+    Jitter (Std.Dev.): 7.18ms
+    Reliability (Loss<1%): 99.9%
+    Konsistenz: -1.369
+    Qualitäts-Klasse: 🥈 Business-Klasse
+
+  PSEUDO-ANYCAST QUALITÄTS-BENCHMARKS:
+    Median-Latenz: 161.23ms
+    P95-Latenz: 246.46ms
+    P99-Latenz: 253.37ms
+    Jitter (Std.Dev.): 77.06ms
+    Reliability (Loss<1%): 100.0%
+    Konsistenz: 0.467
+    Qualitäts-Klasse: 🥈 Business-Klasse
+
+  UNICAST QUALITÄTS-BENCHMARKS:
+    Median-Latenz: 150.97ms
+    P95-Latenz: 274.37ms
+    P99-Latenz: 284.88ms
+    Jitter (Std.Dev.): 80.56ms
+    Reliability (Loss<1%): 99.7%
+    Konsistenz: 0.458
+    Qualitäts-Klasse: 🥈 Business-Klasse
+
+4. AKAMAI-PROBLEM DEEP-DIVE-ANALYSE
+---------------------------------------------
+
+🔍 AKAMAI-ANALYSE - IPv4
+-----------------------------------
+
+📊 PERFORMANCE-VERGLEICH:
+  Akamai (Pseudo-Anycast): 145.46ms (±75.35ms)
+  Echte Anycast Services: 2.46ms (±4.86ms)
+  Unicast Reference: 153.46ms (±153.46ms)
+
+📈 PERFORMANCE-RATIOS:
+  Akamai vs. Echte Anycast: 59.2x (+5815%)
+  Akamai vs. Unicast: 0.9x (-5%)
+  Klassifikation: 🔴 Verhält sich wie Unicast
+
+🛣️ ROUTING-DIVERSITÄTS-ANALYSE:
+  Akamai ASN-Diversität: 1.73 ASNs/Pfad
+  Echte Anycast ASN-Diversität: 1.71 ASNs/Pfad
+  Unicast ASN-Diversität: 2.84 ASNs/Pfad
+  Bewertung: 🟡 Moderate Routing-Diversität
+
+🌍 REGIONALE PERFORMANCE-KONSISTENZ:
+  Durchschn. regionale CV: 0.044
+  Inter-regionale Variabilität: 0.544
+  Echte Anycast inter-regionale Variabilität: 0.863
+  Konsistenz-Bewertung: 🟢 Ähnliche Konsistenz wie echte Anycast
+
+🚨 AKAMAI WORST-CASE-REGIONEN:
+  ap-southeast-2: 249.8ms (vs. Anycast: +27894%)
+  ap-northeast-1: 220.3ms (vs. Anycast: +9008%)
+  sa-east-1: 188.5ms (vs. Anycast: +29654%)
+  ap-east-1: 182.3ms (vs. Anycast: +3830%)
+  ap-south-1: 169.2ms (vs. Anycast: +14503%)
+
+🏗️ INFRASTRUKTUR-DIAGNOSE:
+  Tier-1-Provider-Nutzung: 2.0% (vs. Anycast: 0.1%)
+  Pfad-Completion-Rate: 0.785 (vs. Anycast: 0.878)
+  Latenz pro Hop: 9.99ms (vs. Anycast: 0.41ms)
+
+  🚨 Identifizierte Infrastruktur-Probleme:
+    • Schlechtere Pfad-Completion-Rate
+    • Deutlich ineffizientere Routing-Pfade
+
+📋 AKAMAI-ANALYSE-FAZIT:
+  🟠 Akamai ist Pseudo-Anycast mit signifikanten Performance-Limitationen
+
+🔍 AKAMAI-ANALYSE - IPv6
+-----------------------------------
+
+📊 PERFORMANCE-VERGLEICH:
+  Akamai (Pseudo-Anycast): 144.55ms (±77.06ms)
+  Echte Anycast Services: 3.03ms (±7.18ms)
+  Unicast Reference: 148.75ms (±148.75ms)
+
+📈 PERFORMANCE-RATIOS:
+  Akamai vs. Echte Anycast: 47.7x (+4672%)
+  Akamai vs. Unicast: 1.0x (-3%)
+  Klassifikation: 🔴 Verhält sich wie Unicast
+
+🛣️ ROUTING-DIVERSITÄTS-ANALYSE:
+  Akamai ASN-Diversität: 1.28 ASNs/Pfad
+  Echte Anycast ASN-Diversität: 1.34 ASNs/Pfad
+  Unicast ASN-Diversität: 2.68 ASNs/Pfad
+  Bewertung: 🟡 Moderate Routing-Diversität
+
+🌍 REGIONALE PERFORMANCE-KONSISTENZ:
+  Durchschn. regionale CV: 0.043
+  Inter-regionale Variabilität: 0.561
+  Echte Anycast inter-regionale Variabilität: 0.704
+  Konsistenz-Bewertung: 🟢 Ähnliche Konsistenz wie echte Anycast
+
+🚨 AKAMAI WORST-CASE-REGIONEN:
+  ap-southeast-2: 247.5ms (vs. Anycast: +21856%)
+  ap-northeast-1: 225.4ms (vs. Anycast: +9251%)
+  ap-east-1: 190.3ms (vs. Anycast: +3768%)
+  sa-east-1: 186.3ms (vs. Anycast: +17717%)
+  ap-south-1: 170.9ms (vs. Anycast: +3226%)
+
+🏗️ INFRASTRUKTUR-DIAGNOSE:
+  Tier-1-Provider-Nutzung: 0.3% (vs. Anycast: 0.0%)
+  Pfad-Completion-Rate: 0.916 (vs. Anycast: 0.853)
+  Latenz pro Hop: 9.45ms (vs. Anycast: 0.43ms)
+
+  🚨 Identifizierte Infrastruktur-Probleme:
+    • Deutlich ineffizientere Routing-Pfade
+
+📋 AKAMAI-ANALYSE-FAZIT:
+  🟠 Akamai ist Pseudo-Anycast mit signifikanten Performance-Limitationen
+
+5. UMFASSENDE PHASE 4 VISUALISIERUNGEN (25 CHARTS)
+------------------------------------------------------------
+✅ 25 umfassende Phase 4 Visualisierungen erstellt
